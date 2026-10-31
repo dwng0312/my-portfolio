@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 2200" width="900" height="2200">
+  <!-- Clean Light Luxury Watch Store -->
+  <rect width="900" height="2200" fill="#fafafa" />
+
+  <!-- Navbar -->
+  <rect width="900" height="75" fill="#ffffff" stroke="#eeeeee" stroke-width="1" />
+  <text x="60" y="46" fill="#0f172a" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="800" letter-spacing="2">CARNIVAL WATCHES</text>
+  <text x="490" y="44" fill="#64748b" font-family="sans-serif" font-size="14">Automatic</text>
+  <text x="590" y="44" fill="#64748b" font-family="sans-serif" font-size="14">Chronographs</text>
+  <text x="710" y="44" fill="#64748b" font-family="sans-serif" font-size="14">Heritage</text>
+  <rect x="795" y="24" width="65" height="32" rx="6" fill="#0f172a" />
+  <text x="827" y="45" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="700" text-anchor="middle">Cart (2)</text>
+
+  <!-- Top Announcement -->
+  <rect y="75" width="900" height="34" fill="#0f172a" />
+  <text x="450" y="97" fill="#f8fafc" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">⚡ Worldwide Insured Express Delivery • Top 1 Ranked Official Brand Store</text>
+
+  <!-- Hero Section -->
+  <rect x="60" y="140" width="780" height="420" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+  <rect x="95" y="180" width="170" height="26" rx="13" fill="#fef3c7" />
+  <text x="180" y="197" fill="#b45309" font-family="sans-serif" font-size="11" font-weight="800" text-anchor="middle">SWISS PRECISION SERIES</text>
+  
+  <text x="95" y="260" fill="#0f172a" font-family="sans-serif" font-size="42" font-weight="800">Master Tourbillon<br/>Automatic Edition</text>
+  <text x="95" y="355" fill="#64748b" font-family="sans-serif" font-size="15">Sapphire glass, genuine calfskin strap, and 42-hour power reserve.<br/>Structured JSON-LD schema &amp; zero crawl bloat integration.</text>
+
+  <rect x="95" y="410" width="160" height="46" rx="8" fill="#0f172a" />
+  <text x="175" y="438" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="700" text-anchor="middle">Shop Collection</text>
+  <rect x="270" y="410" width="150" height="46" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+  <text x="345" y="438" fill="#334155" font-family="sans-serif" font-size="14" font-weight="600" text-anchor="middle">Specifications</text>
+
+  <!-- Watch Dial Art -->
+  <circle cx="680" cy="340" r="135" fill="#f8fafc" stroke="#d97706" stroke-width="3" />
+  <circle cx="680" cy="340" r="115" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+  <line x1="680" y1="340" x2="680" y2="270" stroke="#d97706" stroke-width="4" stroke-linecap="round"/>
+  <line x1="680" y1="340" x2="735" y2="340" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="680" cy="340" r="7" fill="#d97706" />
+  <text x="680" y="405" fill="#0f172a" font-family="sans-serif" font-size="11" font-weight="800" text-anchor="middle">CARNIVAL</text>
+
+  <!-- Trust Strip -->
+  <rect x="60" y="585" width="780" height="54" rx="10" fill="#f1f5f9" />
+  <text x="140" y="618" fill="#475569" font-family="sans-serif" font-size="13" font-weight="700">✓ 100% Genuine Watch</text>
+  <text x="430" y="618" fill="#475569" font-family="sans-serif" font-size="13" font-weight="700">✓ 5-Year Global Warranty</text>
+  <text x="700" y="618" fill="#475569" font-family="sans-serif" font-size="13" font-weight="700">✓ Free Global Shipping</text>
+
+  <!-- Product Showcase -->
+  <text x="60" y="690" fill="#0f172a" font-family="sans-serif" font-size="26" font-weight="800">Best-Selling Automatic References</text>
+  <text x="60" y="718" fill="#64748b" font-family="sans-serif" font-size="14">Optimized with clean faceted URLs and aggregate review rich snippets.</text>
+
+  <!-- Product 1 -->
+  <rect x="60" y="745" width="240" height="330" rx="12" fill="#ffffff" stroke="#e2e8f0" />
+  <rect x="75" y="760" width="210" height="170" rx="8" fill="#f8fafc" />
+  <circle cx="180" cy="845" r="50" fill="#ffffff" stroke="#d97706" stroke-width="2" />
+  <text x="75" y="960" fill="#0f172a" font-family="sans-serif" font-size="15" font-weight="700">Master Royal 8110G</text>
+  <text x="75" y="985" fill="#d97706" font-family="sans-serif" font-size="13">★ ★ ★ ★ ★ (148)</text>
+  <text x="75" y="1015" fill="#2563eb" font-family="sans-serif" font-size="17" font-weight="800">$489.00</text>
+  <rect x="215" y="995" width="70" height="28" rx="6" fill="#0f172a" />
+  <text x="250" y="1014" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle">Add</text>
+
+  <!-- Product 2 -->
+  <rect x="330" y="745" width="240" height="330" rx="12" fill="#ffffff" stroke="#e2e8f0" />
+  <rect x="345" y="760" width="210" height="170" rx="8" fill="#f8fafc" />
+  <circle cx="450" cy="845" r="50" fill="#ffffff" stroke="#2563eb" stroke-width="2" />
+  <text x="345" y="960" fill="#0f172a" font-family="sans-serif" font-size="15" font-weight="700">Chronograph Heritage</text>
+  <text x="345" y="985" fill="#d97706" font-family="sans-serif" font-size="13">★ ★ ★ ★ ★ (96)</text>
+  <text x="345" y="1015" fill="#2563eb" font-family="sans-serif" font-size="17" font-weight="800">$620.00</text>
+  <rect x="485" y="995" width="70" height="28" rx="6" fill="#0f172a" />
+  <text x="520" y="1014" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle">Add</text>
+
+  <!-- Product 3 -->
+  <rect x="600" y="745" width="240" height="330" rx="12" fill="#ffffff" stroke="#e2e8f0" />
+  <rect x="615" y="760" width="210" height="170" rx="8" fill="#f8fafc" />
+  <circle cx="720" cy="845" r="50" fill="#ffffff" stroke="#059669" stroke-width="2" />
+  <text x="615" y="960" fill="#0f172a" font-family="sans-serif" font-size="15" font-weight="700">Nautical Diver Pro 300m</text>
+  <text x="615" y="985" fill="#d97706" font-family="sans-serif" font-size="13">★ ★ ★ ★ ★ (210)</text>
+  <text x="615" y="1015" fill="#2563eb" font-family="sans-serif" font-size="17" font-weight="800">$540.00</text>
+  <rect x="755" y="995" width="70" height="28" rx="6" fill="#0f172a" />
+  <text x="790" y="1014" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle">Add</text>
+
+  <!-- Architectural Metrics -->
+  <rect x="60" y="1110" width="780" height="250" rx="16" fill="#ffffff" stroke="#cbd5e1" />
+  <text x="95" y="1155" fill="#2563eb" font-family="sans-serif" font-size="13" font-weight="800" letter-spacing="1">ARCHITECTURAL METRICS</text>
+  <text x="95" y="1195" fill="#0f172a" font-family="sans-serif" font-size="22" font-weight="800">Crawl Efficiency &amp; Schema Optimization Results</text>
+
+  <rect x="95" y="1225" width="190" height="100" rx="10" fill="#f8fafc" border="1px" stroke="#e2e8f0" />
+  <text x="120" y="1265" fill="#059669" font-family="sans-serif" font-size="32" font-weight="800">#1</text>
+  <text x="120" y="1295" fill="#475569" font-family="sans-serif" font-size="13">Google Brand Rank</text>
+
+  <rect x="315" y="1225" width="190" height="100" rx="10" fill="#f8fafc" stroke="#e2e8f0" />
+  <text x="340" y="1265" fill="#2563eb" font-family="sans-serif" font-size="32" font-weight="800">5.3%</text>
+  <text x="340" y="1295" fill="#475569" font-family="sans-serif" font-size="13">SERP Click-Through</text>
+
+  <rect x="535" y="1225" width="220" height="100" rx="10" fill="#f8fafc" stroke="#e2e8f0" />
+  <text x="560" y="1265" fill="#d97706" font-family="sans-serif" font-size="32" font-weight="800">0 Bloat</text>
+  <text x="560" y="1295" fill="#475569" font-family="sans-serif" font-size="13">Clean Faceted Hygiene</text>
+
+  <!-- Footer -->
+  <rect y="1700" width="900" height="500" fill="#0f172a" />
+  <text x="60" y="1770" fill="#ffffff" font-family="sans-serif" font-size="20" font-weight="800">CARNIVAL TIMEPIECES</text>
+  <text x="60" y="1805" fill="#94a3b8" font-family="sans-serif" font-size="14">Shopify store optimization &amp; Schema engineering by Tram Duong.</text>
+</svg>

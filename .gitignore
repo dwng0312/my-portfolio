@@ -1,0 +1,12 @@
+# Node & Dependencies
+node_modules/
+package-lock.json
+
+# Build Archives
+*.zip
+
+# OS / Editor temporary files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

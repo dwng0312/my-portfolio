@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Duong | Freelance Web, SEO & AI Automation Specialist</title>
+  <meta name="description" content="Portfolio of Duong — Freelancer in Website Development (Shopify, WordPress, Wix), Technical SEO, and AI Marketing Automation.">
+  <meta name="author" content="Duong">
+  <link rel="icon" type="image/png" href="assets/img/avt.png">
+  <meta property="og:image" content="assets/img/avt.png">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#2563eb',
+              emerald: '#059669',
+              slate: '#0f172a'
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS (Light Minimalist Theme) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://tramduong.dev/#person",
+        "name": "Duong",
+        "alternateName": "Dương",
+        "jobTitle": "Freelance Web Specialist, SEO & AI Automation",
+        "email": "duongtk.work@gmail.com",
+        "telephone": "+84835575440",
+        "url": "https://www.linkedin.com/in/duong-kieu-tram-duong-t-690133244",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Can Tho",
+          "addressCountry": "Vietnam"
+        },
+        "knowsLanguage": ["en", "vi"]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-white text-slate-800 antialiased light-grid-bg min-h-screen flex flex-col justify-between">
+
+  <!-- =======================================================================
+       STICKY NAVIGATION BAR (STRICT SINGLE ROW - NO WRAPPING AT 1920x1080)
+       ======================================================================= -->
+  <header class="sticky top-0 z-50 clean-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 py-3.5 flex items-center justify-between flex-nowrap gap-4">
+      
+      <!-- Brand Logo & Identity (shrink-0 prevents wrapping) -->
+      <a href="#hero" class="flex items-center gap-3 shrink-0 group">
+        <div class="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center font-bold text-white text-base shadow-sm group-hover:bg-blue-700 transition-colors">
+          D
+        </div>
+        <div class="leading-tight">
+          <span class="font-bold text-base text-slate-900 tracking-tight block">Duong</span>
+          <span class="text-[11px] font-mono text-slate-500 uppercase tracking-wider block">Web • SEO • AI Automation</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu (Concise & strictly on one line) -->
+      <nav class="hidden md:flex items-center gap-7 lg:gap-9 text-sm font-semibold text-slate-600 shrink-0">
+        <a href="#about" class="hover:text-blue-600 transition-colors" data-i18n="nav_about">About</a>
+        <a href="#pillars" class="hover:text-blue-600 transition-colors" data-i18n="nav_expertise">Expertise</a>
+        <a href="#case-studies" class="hover:text-blue-600 transition-colors" data-i18n="nav_cases">Case Studies</a>
+        <a href="#showcase" class="hover:text-blue-600 transition-colors" data-i18n="nav_showcase">Website Showcase</a>
+        <a href="#skills" class="hover:text-blue-600 transition-colors" data-i18n="nav_skills">Skills</a>
+      </nav>
+
+      <!-- Right Action Items (shrink-0 ensures no wrapping) -->
+      <div class="hidden sm:flex items-center gap-3 shrink-0">
+        <!-- Language Switcher Button (EN / VI) -->
+        <div class="lang-switch-btn" id="langSwitchBtn" role="button" tabindex="0" aria-label="Switch language">
+          <span class="lang-opt active" data-lang-opt="en">EN</span>
+          <span class="lang-opt" data-lang-opt="vi">VI</span>
+        </div>
+
+        <div class="hidden xl:flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span data-i18n="nav_available">Freelance Available</span>
+        </div>
+        <a href="#contact" class="px-4.5 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs uppercase tracking-wider shadow-sm transition-all" data-i18n="nav_contact">
+          Get in Touch
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button & Mobile Lang Toggle -->
+      <div class="md:hidden flex items-center gap-2">
+        <div class="lang-switch-btn" id="mobileLangSwitchBtn" role="button" tabindex="0" aria-label="Switch language">
+          <span class="lang-opt active" data-lang-opt="en">EN</span>
+          <span class="lang-opt" data-lang-opt="vi">VI</span>
+        </div>
+        <button id="mobileMenuBtn" class="p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none" aria-label="Toggle navigation">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 bg-white/95 px-4 pt-3 pb-6 space-y-2.5">
+      <a href="#about" class="block px-3 py-2 rounded-md text-sm font-semibold text-slate-700 hover:bg-slate-50" data-i18n="nav_about">About</a>
+      <a href="#pillars" class="block px-3 py-2 rounded-md text-sm font-semibold text-slate-700 hover:bg-slate-50" data-i18n="nav_expertise">Core Expertise</a>
+      <a href="#case-studies" class="block px-3 py-2 rounded-md text-sm font-semibold text-slate-700 hover:bg-slate-50" data-i18n="nav_cases">Case Studies</a>
+      <a href="#showcase" class="block px-3 py-2 rounded-md text-sm font-semibold text-slate-700 hover:bg-slate-50" data-i18n="nav_showcase">Website Showcase</a>
+      <a href="#skills" class="block px-3 py-2 rounded-md text-sm font-semibold text-slate-700 hover:bg-slate-50" data-i18n="nav_skills">Technical Skills</a>
+      <a href="#contact" class="block px-3 py-2 rounded-md text-sm font-bold text-blue-600 bg-blue-50" data-i18n="nav_contact">Contact &amp; Hire</a>
+    </div>
+  </header>
+
+
+  <!-- =======================================================================
+       HERO SECTION (100VH / SPACIOUS / AIRY TYPOGRAPHY)
+       ======================================================================= -->
+  <section id="hero" class="min-h-[calc(100vh-74px)] flex items-center py-12 md:py-20 border-b border-slate-200 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Left Column: Spacious Bio & Value Pitch -->
+        <div class="lg:col-span-8 space-y-6 sm:space-y-8">
+          
+          <!-- Audience / Availability Pill -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-700">
+            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            <span data-i18n="hero_pill">Freelancer • Website, SEO &amp; AI Automation Marketing</span>
+          </div>
+
+          <!-- Main Headline with Generous Line-Height & Sizing -->
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-extrabold tracking-tight text-slate-900 leading-[1.2] sm:leading-[1.26]" data-i18n="hero_title">
+            Freelance Web Specialist &amp; Growth Engineer <br class="hidden sm:inline" />
+            <span class="text-blue-600">Web Development, Technical SEO &amp; AI Automation.</span>
+          </h1>
+
+          <!-- Value Statement with Relaxed Line-Height -->
+          <p class="text-base sm:text-lg text-slate-600 leading-[1.8] max-w-2xl font-normal" data-i18n="hero_desc">
+            I'm <strong class="text-slate-900 font-bold">Duong</strong>. I partner with businesses and boutique agencies to build high-converting websites (Shopify, WordPress, Wix), dominate Google search through <strong class="text-slate-900 font-semibold">Technical &amp; Semantic SEO</strong>, and eliminate manual marketing bottlenecks with <strong class="text-slate-900 font-semibold">AI &amp; workflow automation</strong>.
+          </p>
+
+          <!-- Core Competencies Chips -->
+          <div class="flex flex-wrap gap-2.5 pt-1">
+            <span class="code-tag">Shopify &amp; WordPress</span>
+            <span class="code-tag">Wix Studio</span>
+            <span class="code-tag">Technical &amp; Semantic SEO</span>
+            <span class="code-tag">AI Marketing Automation</span>
+            <span class="code-tag">Make / Zapier &amp; GTM</span>
+            <span class="code-tag">High-CRO Landing Pages</span>
+          </div>
+
+          <!-- Action Buttons with Breathing Room -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#showcase" class="px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow-sm transition-all flex items-center gap-2">
+              <i data-lucide="layers" class="w-4 h-4"></i>
+              <span data-i18n="hero_btn_showcase">View Website Showcase</span>
+            </a>
+            
+            <a href="mailto:duongtk.work@gmail.com" class="px-5 py-3.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-sm border border-slate-200 transition-all flex items-center gap-2">
+              <i data-lucide="mail" class="w-4 h-4 text-blue-600"></i>
+              <span>duongtk.work@gmail.com</span>
+            </a>
+
+            <button data-copy="duongtk.work@gmail.com" class="copy-trigger px-4 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 text-sm font-semibold transition-all flex items-center gap-2 shadow-2xs" title="Copy Email">
+              <i data-lucide="copy" class="w-4 h-4 text-emerald-600"></i>
+              <span data-i18n="hero_btn_copy">Copy Email</span>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Clean Profile Card -->
+        <div class="lg:col-span-4">
+          <div class="clean-card p-6 sm:p-7 border border-slate-200 shadow-sm relative space-y-5">
+            
+            <!-- Large Portrait Avatar & Identity -->
+            <div class="space-y-4 pb-5 border-b border-slate-100">
+              <div class="relative w-full aspect-square max-w-[260px] mx-auto overflow-hidden rounded-2xl border-2 border-slate-200 shadow-sm bg-slate-50 group">
+                <img src="assets/img/avt.png" alt="Dương" class="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105">
+                <div class="absolute bottom-2.5 left-2.5 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-sm border border-slate-200 text-[11px] font-semibold text-slate-800 flex items-center gap-1.5 shadow-2xs">
+                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                  <span>Freelancer</span>
+                </div>
+              </div>
+
+              <div class="text-center pt-1">
+                <h2 class="text-2xl font-extrabold text-slate-900 tracking-tight leading-snug">Dương</h2>
+                <p class="text-xs font-bold text-blue-600 uppercase tracking-wider mt-0.5">Web • SEO • AI Automation</p>
+                <div class="flex items-center justify-center gap-1 text-xs text-slate-500 mt-1.5">
+                  <i data-lucide="map-pin" class="w-3.5 h-3.5 text-slate-400"></i>
+                  <span>Cần Thơ, Vietnam (Remote)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Direct Contact & Social -->
+            <div class="space-y-3 text-xs pb-5 border-b border-slate-100">
+              <div class="flex items-center justify-between">
+                <span class="text-slate-500 font-medium flex items-center gap-1.5">
+                  <i data-lucide="mail" class="w-3.5 h-3.5 text-slate-400"></i> Email:
+                </span>
+                <a href="mailto:duongtk.work@gmail.com" class="text-blue-600 font-mono font-semibold hover:underline">duongtk.work@gmail.com</a>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-500 font-medium flex items-center gap-1.5">
+                  <i data-lucide="phone" class="w-3.5 h-3.5 text-slate-400"></i> Phone:
+                </span>
+                <span class="font-mono text-slate-800 font-semibold">0835575440</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-500 font-medium flex items-center gap-1.5">
+                  <i data-lucide="linkedin" class="w-3.5 h-3.5 text-blue-600"></i> LinkedIn:
+                </span>
+                <a href="https://www.linkedin.com/in/duong-kieu-tram-duong-t-690133244" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-semibold hover:underline flex items-center gap-0.5">
+                  <span>tram-duong</span>
+                  <i data-lucide="external-link" class="w-3 h-3"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Languages (Vietnamese & English, Education & Major Hidden as requested) -->
+            <div class="space-y-2 text-xs">
+              <span class="text-slate-500 font-medium block" data-i18n="card_lang_title">Working Languages:</span>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="font-semibold text-slate-800 bg-slate-100 px-2.5 py-1 rounded-md border border-slate-200">
+                  🇻🇳 Vietnamese (Native)
+                </span>
+                <span class="font-bold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-md border border-blue-200">
+                  🇬🇧 English (Vstep B2 - Professional)
+                </span>
+              </div>
+              <p class="text-[11px] text-slate-500 pt-1" data-i18n="card_lang_desc">
+                Fluent with international client communication, technical APIs, and documentation.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =======================================================================
+       ABOUT & VALUE PROPOSITION
+       ======================================================================= -->
+  <section id="about" class="py-16 border-b border-slate-200 bg-slate-50/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mb-12">
+        <div class="text-xs font-mono font-bold uppercase tracking-widest text-blue-600 mb-1">01 // About &amp; Approach</div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Turning Digital Assets Into Revenue Engines</h2>
+        <p class="text-slate-600 mt-2 text-sm sm:text-base leading-relaxed">
+          Bridging technical web development, organic search algorithms, and automated marketing workflows for modern founders and digital marketing agencies.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="clean-card p-6 border border-slate-200 bg-white">
+          <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold mb-4 border border-blue-100">
+            <i data-lucide="layout" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 mb-2">Web &amp; Landing Page Development</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Engineering websites and sales funnels across Shopify Liquid, WordPress child themes, and Wix Studio. Optimized for fast mobile loading, sub-second LCP, and friction-free checkout flows.
+          </p>
+        </div>
+
+        <div class="clean-card p-6 border border-slate-200 bg-white">
+          <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold mb-4 border border-emerald-100">
+            <i data-lucide="search" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 mb-2">Technical &amp; Semantic SEO</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Diagnosing crawl budget triage with Screaming Frog &amp; Semrush, removing toxic index bloat, implementing Schema.org JSON-LD structured data, and deploying semantic topic clusters that rank.
+          </p>
+        </div>
+
+        <div class="clean-card p-6 border border-slate-200 bg-white">
+          <div class="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center font-bold mb-4 border border-purple-100">
+            <i data-lucide="cpu" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 mb-2">AI Marketing Automation &amp; Tracking</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Connecting lead forms to CRMs via Make, Zapier &amp; Webhooks. Engineering Google Tag Manager event deduplication variables and GA4 custom funnels with 100% conversion attribution match rates.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =======================================================================
+       CORE PILLARS OF EXPERTISE
+       ======================================================================= -->
+  <section id="pillars" class="py-16 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mb-12">
+        <div class="text-xs font-mono font-bold uppercase tracking-widest text-blue-600 mb-1">02 // Core Competencies</div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Four Pillars of Freelance Delivery</h2>
+        <p class="text-slate-600 mt-2 text-sm sm:text-base leading-relaxed">
+          Comprehensive, end-to-end execution covering design, code, search indexation, and automated pipelines.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <div class="clean-card p-6 sm:p-7 border border-slate-200">
+          <span class="text-xs font-mono font-bold text-blue-600 uppercase tracking-wider block mb-2">Pillar 01</span>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">E-Commerce &amp; Web Development</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+            Custom development on Shopify Liquid, WordPress, and Wix Studio. From responsive storefront customization to third-party app conflict troubleshooting.
+          </p>
+          <ul class="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
+            <li>Shopify Theme Liquid customization, checkout CRO, and collection architecture.</li>
+            <li>WordPress lightweight child themes, Gutenberg &amp; Elementor builds.</li>
+            <li>Wix Studio interactive portals, booking forms, and custom responsive layouts.</li>
+          </ul>
+        </div>
+
+        <div class="clean-card p-6 sm:p-7 border border-slate-200">
+          <span class="text-xs font-mono font-bold text-emerald-600 uppercase tracking-wider block mb-2">Pillar 02</span>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Technical &amp; Semantic SEO</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+            Auditing search architecture to ensure Google spiders crawl, understand, and rank pages efficiently.
+          </p>
+          <ul class="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
+            <li>Crawl health triage, resolving 4xx/5xx errors, robots.txt, dynamic XML sitemaps.</li>
+            <li>Schema.org JSON-LD structured data (<code class="code-tag">LocalBusiness</code>, <code class="code-tag">Product</code>, <code class="code-tag">FAQPage</code>).</li>
+            <li>Entity-based keyword research, topic clustering, and internal link graph design.</li>
+          </ul>
+        </div>
+
+        <div class="clean-card p-6 sm:p-7 border border-slate-200">
+          <span class="text-xs font-mono font-bold text-purple-600 uppercase tracking-wider block mb-2">Pillar 03</span>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">AI Marketing Automation &amp; Data Tracking</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+            Eliminating manual data entry and ensuring 100% reliable conversion attribution across ad platforms.
+          </p>
+          <ul class="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
+            <li>Workflow automation pipelines connecting web forms to CRMs via Make &amp; Zapier.</li>
+            <li>Google Tag Manager custom JS triggers and transaction token deduplication.</li>
+            <li>Google Analytics 4 custom event funnels and Meta/TikTok pixel server sync.</li>
+          </ul>
+        </div>
+
+        <div class="clean-card p-6 sm:p-7 border border-slate-200">
+          <span class="text-xs font-mono font-bold text-rose-600 uppercase tracking-wider block mb-2">Pillar 04</span>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Social Commerce &amp; Multi-Channel Operations</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+            Managing omnichannel retail operations spanning official web storefronts and social e-commerce.
+          </p>
+          <ul class="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
+            <li>TikTok Shop &amp; Shopee store setup, listing SEO, and automated order dispatch.</li>
+            <li>Organic content planning, short-form video scripts, and Canva graphic design assets.</li>
+            <li>Repurposing top-performing SEO content into viral bite-sized social assets.</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =======================================================================
+       CONSOLIDATED CASE STUDIES (ALL EXPERIENCES MERGED HERE)
+       ======================================================================= -->
+  <section id="case-studies" class="py-16 border-b border-slate-200 bg-slate-50/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mb-12">
+        <div class="text-xs font-mono font-bold uppercase tracking-widest text-blue-600 mb-1">03 // Proven Track Record</div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Featured Case Studies &amp; Client Projects</h2>
+        <p class="text-slate-600 mt-2 text-sm sm:text-base leading-relaxed">
+          Real technical challenges diagnosed, executed, and verified across e-commerce, international services, and growth platforms.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+
+        <!-- Case 1: German Relocation & Butler Service (FIXED OVERFLOW BUG) -->
+        <div class="clean-card p-6 sm:p-8 border border-slate-200 bg-white">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <div class="lg:col-span-7 space-y-4 min-w-0">
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-0.5 rounded bg-blue-50 text-blue-800 border border-blue-200 text-xs font-bold uppercase">
+                  German Local Service B2B
+                </span>
+                <span class="text-xs text-slate-500 font-mono">Berlin &amp; Brandenburg</span>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900">
+                German Butler &amp; Relocation: Mobile-First Theme &amp; Entity Schema
+              </h3>
+              
+              <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700 leading-relaxed">
+                <strong>Challenge:</strong> German relocation enterprise required clear search entity recognition in Google Maps and fast mobile load times across Berlin districts with minimal DOM baggage.
+              </div>
+
+              <div class="space-y-1.5 text-xs sm:text-sm text-slate-600">
+                <span class="font-bold text-slate-800 block">Execution:</span>
+                <ul class="list-disc list-inside space-y-1">
+                  <li>Built a lightweight, mobile-first WordPress child theme minimizing script payloads.</li>
+                  <li>Engineered nested <code class="code-tag">MovingCompany</code> and <code class="code-tag">LocalBusiness</code> JSON-LD schema linking service areas, operating hours, and coordinates.</li>
+                  <li>Connected responsive service booking calculator with zero render-blocking scripts.</li>
+                </ul>
+              </div>
+
+              <div class="pt-2">
+                <button data-open-modal="project-germany-butler" class="text-xs font-bold text-blue-600 hover:text-blue-700 inline-flex items-center gap-1.5 py-1">
+                  <span>Inspect German Web Architecture Preview</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Fixed Metrics Box (NO OVERFLOW - Generous Width & Spacing for 100% and -40%) -->
+            <div class="lg:col-span-5 bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-3 min-w-0">
+              <span class="text-xs font-mono font-bold uppercase tracking-wider text-slate-500 block">
+                Verified Outcomes:
+              </span>
+              
+              <div class="p-3 bg-white rounded-lg border border-slate-200 flex items-center gap-3">
+                <div class="min-w-[64px] px-2.5 py-1.5 rounded-lg bg-emerald-50 text-emerald-700 font-extrabold text-sm text-center shrink-0 border border-emerald-200">
+                  100%
+                </div>
+                <div class="min-w-0">
+                  <div class="text-xs sm:text-sm font-bold text-slate-900">Clean Rich Results</div>
+                  <div class="text-[11px] text-slate-500">Zero syntax errors on Google Rich Results Testing Tool.</div>
+                </div>
+              </div>
+
+              <div class="p-3 bg-white rounded-lg border border-slate-200 flex items-center gap-3">
+                <div class="min-w-[64px] px-2.5 py-1.5 rounded-lg bg-blue-50 text-blue-700 font-extrabold text-sm text-center shrink-0 border border-blue-200">
+                  -40%
+                </div>
+                <div class="min-w-0">
+                  <div class="text-xs sm:text-sm font-bold text-slate-900">DOM Loading Friction</div>
+                  <div class="text-[11px] text-slate-500">Stripped unnecessary theme baggage for instant mobile rendering.</div>
+                </div>
+              </div>
+
+              <div class="p-3 bg-white rounded-lg border border-slate-200 flex items-center gap-3">
+                <div class="min-w-[64px] px-2.5 py-1.5 rounded-lg bg-purple-50 text-purple-700 font-extrabold text-xs text-center shrink-0 border border-purple-200">
+                  Entity
+                </div>
+                <div class="min-w-0">
+                  <div class="text-xs sm:text-sm font-bold text-slate-900">Google Knowledge Graph</div>
+                  <div class="text-[11px] text-slate-500">Accurate areaServed mapping for regional queries.</div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Case 2: Carnival Vietnam (Watch Brand Technical SEO) -->
+        <div class="clean-card p-6 sm:p-8 border border-slate-200 bg-white">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <div class="lg:col-span-7 space-y-4 min-w-0">
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-200 text-xs font-bold uppercase">
+                  Freelance SEO Case Study
+                </span>
+                <span class="text-xs text-slate-500 font-mono">Carnival Vietnam</span>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900">
+                Technical SEO &amp; Brand Top 1 Search Rank Restoration
+              </h3>
+              
+              <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700 leading-relaxed">
+                <strong>Challenge:</strong> Platform struggled with crawl inefficiency and indexation bloat caused by faceted search parameter URLs and legacy toxic backlink spam.
+              </div>
+
+              <div class="space-y-1.5 text-xs sm:text-sm text-slate-600">
+                <span class="font-bold text-slate-800 block">Execution:</span>
+                <ul class="list-disc list-inside space-y-1">
+                  <li>Triage and disavow workflow via Google Search Console.</li>
+                  <li>Cleaned faceted URL parameters &amp; configured 301 redirects to eliminate duplicate indexing.</li>
+                  <li>Structured nested <code class="code-tag">Product</code>, <code class="code-tag">AggregateRating</code>, and <code class="code-tag">BreadcrumbList</code> JSON-LD schemas.</li>
+                </ul>
+              </div>
+
+              <div class="pt-2">
+                <button data-open-modal="project-carnival-watch" class="text-xs font-bold text-blue-600 hover:text-blue-700 inline-flex items-center gap-1.5 py-1">
+                  <span>Inspect E-Commerce Store Architecture</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Metrics Box -->
+            <div class="lg:col-span-5 bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-3 min-w-0">
+              <span class="text-xs font-mono font-bold uppercase tracking-wider text-slate-500 block">
+                Verified Outcomes:
+              </span>
+              
+              <div class="p-3 bg-white rounded-lg border border-slate-200 flex items-center gap-3">
+                <div class="min-w-[64px] px-2.5 py-1.5 rounded-lg bg-emerald-50 text-emerald-700 font-extrabold text-sm text-center shrink-0 border border-emerald-200">
+                  #1
+                </div>
+                <div class="min-w-0">
+                  <div class="text-xs sm:text-sm font-bold text-slate-900">Top 1 Google Rank</div>
+                  <div class="text-[11px] text-slate-500">For brand keyword 'carnivalvietnam' with rich sitelinks.</div>
+                </div>
+              </div>
+
+              <div class="p-3 bg-white rounded-lg border border-slate-200 flex items-center gap-3">
+                <div class="min-w-[64px] px-2.5 py-1.5 rounded-lg bg-blue-50 text-blue-700 font-extrabold text-sm text-center shrink-0 border border-blue-200">
+                  5.3%
+                </div>
+                <div class="min-w-0">
+                  <div class="text-xs sm:text-sm font-bold text-slate-900">Average Organic CTR</div>
+                  <div class="text-[11px] text-slate-500">Achieved within the first 1.5 months of measurement.</div>
+                </div>
+              </div>
+
+              <div class="p-3 bg-white rounded-lg border border-slate-200 flex items-center gap-3">
+                <div class="min-w-[64px] px-2.5 py-1.5 rounded-lg bg-amber-50 text-amber-700 font-extrabold text-xs text-center shrink-0 border border-amber-200">
+                  0 Bloat
+                </div>
+                <div class="min-w-0">
+                  <div class="text-xs sm:text-sm font-bold text-slate-900">Zero Index Bloat</div>
+                  <div class="text-[11px] text-slate-500">Cleaned crawl budget and parameterized duplicate URLs.</div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Case 3: Jobsnew Organic Traffic Growth -->
+        <div class="clean-card p-6 sm:p-8 border border-slate-200 bg-white">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <div class="lg:col-span-7 space-y-4 min-w-0">
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-bold uppercase">
+                  Content SEO Specialist
+                </span>
+                <span class="text-xs text-slate-500 font-mono">Jobsnew Platform</span>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900">
+                Semantic SEO Content Strategy: +56% Organic Traffic Surge
+              </h3>
+              
+              <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700 leading-relaxed">
+                <strong>Challenge:</strong> Elevating organic traffic and capturing high-intent search volume in a competitive job and career niche without paid advertising.
+              </div>
+
+              <div class="space-y-1.5 text-xs sm:text-sm text-slate-600">
+                <span class="font-bold text-slate-800 block">Execution:</span>
+                <ul class="list-disc list-inside space-y-1">
+                  <li>Researched keyword intent clusters and engineered semantic content silos.</li>
+                  <li>Researched, produced, and published <strong>207 semantic SEO articles</strong> targeting high-volume long-tail queries.</li>
+                  <li>Optimized internal links graph to channel page equity towards core service landing pages.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Metrics Box -->
+            <div class="lg:col-span-5 bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-3 min-w-0">
+              <span class="text-xs font-mono font-bold uppercase tracking-wider text-slate-500 block">
+                Verified Outcomes:
+              </span>
+              
+              <div class="p-3 bg-white rounded-lg border border-slate-200 flex items-center gap-3">
+                <div class="min-w-[64px] px-2.5 py-1.5 rounded-lg bg-emerald-50 text-emerald-700 font-extrabold text-sm text-center shrink-0 border border-emerald-200">
+                  +56%
+                </div>
+                <div class="min-w-0">
+                  <div class="text-xs sm:text-sm font-bold text-slate-900">Organic Traffic Growth</div>
+                  <div class="text-[11px] text-slate-500">From 12.3k to 19.2k monthly visits in just 3 months.</div>
+                </div>
+              </div>
+
+              <div class="p-3 bg-white rounded-lg border border-slate-200 flex items-center gap-3">
+                <div class="min-w-[64px] px-2.5 py-1.5 rounded-lg bg-blue-50 text-blue-700 font-extrabold text-sm text-center shrink-0 border border-blue-200">
+                  207
+                </div>
+                <div class="min-w-0">
+                  <div class="text-xs sm:text-sm font-bold text-slate-900">Articles Published</div>
+                  <div class="text-[11px] text-slate-500">&gt;50% ranked in Google Top 1, Top 3, and Top 10.</div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 3 Supplementary Industry Cases (Shopify, Yatame, Mariel) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+
+          <!-- Case 4: Freelance Shopify -->
+          <div class="clean-card p-6 border border-slate-200 bg-white flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-mono font-bold text-blue-600 uppercase">Freelance E-Com</span>
+                <span class="text-xs text-slate-500 font-semibold">Ongoing</span>
+              </div>
+              <h3 class="text-base font-bold text-slate-900 mb-2">Shopify Liquid Themes &amp; Store Setup</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Developing responsive Shopify Liquid themes, configuring checkout flows, auditing 3rd-party apps (reviews, upsells, inventory sync), and resolving theme script conflicts for international clients.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2 text-xs font-semibold text-blue-600">
+              <i data-lucide="check" class="w-3.5 h-3.5"></i>
+              <span>Liquid • Apps • Schema • Checkout</span>
+            </div>
+          </div>
+
+          <!-- Case 5: Yatame Agency -->
+          <div class="clean-card p-6 border border-slate-200 bg-white flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-mono font-bold text-slate-500 uppercase">Yatame Agency</span>
+                <span class="text-xs text-slate-500 font-semibold">2026</span>
+              </div>
+              <h3 class="text-base font-bold text-slate-900 mb-2">Technical SEO &amp; Internal Link Clusters</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Executed comprehensive technical SEO site health reviews: page load optimization, URL architecture hygiene, robots.txt, dynamic XML sitemaps, and fixing 4xx/5xx server response errors.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2 text-xs font-semibold text-emerald-600">
+              <i data-lucide="check" class="w-3.5 h-3.5"></i>
+              <span>Crawl Health • 4xx/5xx Fixes</span>
+            </div>
+          </div>
+
+          <!-- Case 6: Mariel Paper Tissues -->
+          <div class="clean-card p-6 border border-slate-200 bg-white flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-mono font-bold text-slate-500 uppercase">Khăn Giấy Mariel</span>
+                <span class="text-xs text-slate-500 font-semibold">Operations</span>
+              </div>
+              <h3 class="text-base font-bold text-slate-900 mb-2">Omnichannel Social &amp; E-Commerce Ops</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Organic content production on TikTok &amp; Facebook (articles and short videos). Optimized product listings and managed order processing pipelines across Shopee Mall and TikTok Shop.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2 text-xs font-semibold text-purple-600">
+              <i data-lucide="check" class="w-3.5 h-3.5"></i>
+              <span>Shopee • TikTok Shop • Content</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =======================================================================
+       WEBSITE & LANDING PAGE SHOWCASE (WITH USER'S REAL UPLOADED IMAGES)
+       ======================================================================= -->
+  <section id="showcase" class="py-16 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header (No "6 projects" badge as requested) -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+        <div>
+          <div class="text-xs font-mono font-bold uppercase tracking-widest text-blue-600 mb-1" data-i18n="showcase_badge">04 // Interactive Gallery</div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900" data-i18n="showcase_title">Website &amp; Landing Page Showcase</h2>
+          <p class="text-slate-600 mt-1 text-sm sm:text-base max-w-2xl leading-relaxed" data-i18n="showcase_desc">
+            Live preview of full-length websites and high-converting landing pages built across WordPress, Wix Studio, and Shopify. Hover over any window to scroll down, or click to open the full inspector.
+          </p>
+        </div>
+
+        <div class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-50 border border-slate-200 text-xs font-medium text-slate-600">
+          <i data-lucide="mouse-pointer" class="w-3.5 h-3.5 text-blue-600"></i>
+          <span data-i18n="showcase_tip">Hover to auto-scroll • Click to view full screenshot</span>
+        </div>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="flex flex-wrap items-center gap-2 pb-6 border-b border-slate-200">
+        <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All Works</button>
+        <button class="filter-btn" data-filter="wordpress" data-i18n="filter_wp">WordPress &amp; B2B Web</button>
+        <button class="filter-btn" data-filter="landing-cro" data-i18n="filter_cro">High-CRO Landing Pages</button>
+        <button class="filter-btn" data-filter="wix" data-i18n="filter_wix">Wix &amp; Modern Web</button>
+        <button class="filter-btn" data-filter="ecommerce" data-i18n="filter_ecom">Shopify &amp; E-Commerce</button>
+      </div>
+
+      <!-- Projects Grid with Real Uploaded WebP Images -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 mt-8">
+
+        <!-- Real Project 1: German Butler (WordPress) -->
+        <div class="project-card group" data-category="wordpress">
+          <div class="browser-mockup">
+            <div class="browser-header">
+              <span class="browser-dot red"></span>
+              <span class="browser-dot yellow"></span>
+              <span class="browser-dot green"></span>
+              <div class="browser-url-bar">
+                <i data-lucide="lock" class="w-3 h-3 text-emerald-600 shrink-0"></i>
+                <span>https://germany-butler.de</span>
+              </div>
+            </div>
+            <div class="browser-viewport" data-open-modal="project-germany-butler">
+              <img src="assets/img/projects/Web_WP_Germany_Butler_11zon.webp" alt="German Butler Relocation Website" class="tall-screenshot" loading="lazy">
+              <div class="viewport-overlay">
+                <span class="inspect-pill">
+                  <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Inspect Full Page
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3.5">
+            <div class="text-[11px] font-mono text-emerald-600 font-semibold mb-0.5">WordPress • Local Entity SEO</div>
+            <h3 class="text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">German Butler &amp; Relocation Portal</h3>
+            <p class="text-xs text-slate-500 mt-1 line-clamp-2">Lightweight child theme with nested MovingCompany schema, achieving 100% Rich Results and -40% DOM friction.</p>
+          </div>
+        </div>
+
+        <!-- Real Project 2: Healthcare & Medical CRO Landing Page -->
+        <div class="project-card group" data-category="landing-cro">
+          <div class="browser-mockup">
+            <div class="browser-header">
+              <span class="browser-dot red"></span>
+              <span class="browser-dot yellow"></span>
+              <span class="browser-dot green"></span>
+              <div class="browser-url-bar">
+                <i data-lucide="lock" class="w-3 h-3 text-emerald-600 shrink-0"></i>
+                <span>https://medical-clinic.vn/consultation</span>
+              </div>
+            </div>
+            <div class="browser-viewport" data-open-modal="project-lp-ykhoa">
+              <img src="assets/img/projects/LP_Ykhoa_11zon.webp" alt="Medical Healthcare Landing Page" class="tall-screenshot" loading="lazy">
+              <div class="viewport-overlay">
+                <span class="inspect-pill">
+                  <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Inspect Full Page
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3.5">
+            <div class="text-[11px] font-mono text-blue-600 font-semibold mb-0.5">High-CRO • Healthcare UX</div>
+            <h3 class="text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Healthcare &amp; Medical Clinic Landing Page</h3>
+            <p class="text-xs text-slate-500 mt-1 line-clamp-2">Direct-response appointment booking landing page with prominent trust badges and frictionless lead capture.</p>
+          </div>
+        </div>
+
+        <!-- Real Project 3: Fixhub Doors (Wix Studio) -->
+        <div class="project-card group" data-category="wix">
+          <div class="browser-mockup">
+            <div class="browser-header">
+              <span class="browser-dot red"></span>
+              <span class="browser-dot yellow"></span>
+              <span class="browser-dot green"></span>
+              <div class="browser-url-bar">
+                <i data-lucide="lock" class="w-3 h-3 text-emerald-600 shrink-0"></i>
+                <span>https://fixhub-doors.com</span>
+              </div>
+            </div>
+            <div class="browser-viewport" data-open-modal="project-wix-doors">
+              <img src="assets/img/projects/Web_Wix_Doors_Fixhub_11zon.webp" alt="Fixhub Doors Services Web" class="tall-screenshot" loading="lazy">
+              <div class="viewport-overlay">
+                <span class="inspect-pill">
+                  <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Inspect Full Page
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3.5">
+            <div class="text-[11px] font-mono text-purple-600 font-semibold mb-0.5">Wix Studio • Home Services</div>
+            <h3 class="text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Fixhub Doors &amp; Architectural Services</h3>
+            <p class="text-xs text-slate-500 mt-1 line-clamp-2">Commercial service website with product catalog filters, door project galleries, and online quotation requests.</p>
+          </div>
+        </div>
+
+        <!-- Real Project 4: Newlife Study Abroad (WordPress) -->
+        <div class="project-card group" data-category="wordpress">
+          <div class="browser-mockup">
+            <div class="browser-header">
+              <span class="browser-dot red"></span>
+              <span class="browser-dot yellow"></span>
+              <span class="browser-dot green"></span>
+              <div class="browser-url-bar">
+                <i data-lucide="lock" class="w-3 h-3 text-emerald-600 shrink-0"></i>
+                <span>https://newlife-edu.vn</span>
+              </div>
+            </div>
+            <div class="browser-viewport" data-open-modal="project-wp-duhoc">
+              <img src="assets/img/projects/Web_WP_duhocNewlife_11zon.webp" alt="Newlife Study Abroad Portal" class="tall-screenshot" loading="lazy">
+              <div class="viewport-overlay">
+                <span class="inspect-pill">
+                  <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Inspect Full Page
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3.5">
+            <div class="text-[11px] font-mono text-emerald-600 font-semibold mb-0.5">WordPress • Education Portal</div>
+            <h3 class="text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Newlife Study Abroad &amp; Advisory Portal</h3>
+            <p class="text-xs text-slate-500 mt-1 line-clamp-2">Multi-country education advisory portal with semantic topic silos, scholarship guides, and advisory consultation forms.</p>
+          </div>
+        </div>
+
+        <!-- Real Project 5: Media & PR Landing Page -->
+        <div class="project-card group" data-category="landing-cro">
+          <div class="browser-mockup">
+            <div class="browser-header">
+              <span class="browser-dot red"></span>
+              <span class="browser-dot yellow"></span>
+              <span class="browser-dot green"></span>
+              <div class="browser-url-bar">
+                <i data-lucide="lock" class="w-3 h-3 text-emerald-600 shrink-0"></i>
+                <span>https://pr-media-agency.com/services</span>
+              </div>
+            </div>
+            <div class="browser-viewport" data-open-modal="project-lp-baochi">
+              <img src="assets/img/projects/LP_Wix_Baochi_11zon.webp" alt="Media & Journalism PR Landing Page" class="tall-screenshot" loading="lazy">
+              <div class="viewport-overlay">
+                <span class="inspect-pill">
+                  <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Inspect Full Page
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3.5">
+            <div class="text-[11px] font-mono text-blue-600 font-semibold mb-0.5">Wix Studio • Media &amp; PR</div>
+            <h3 class="text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Media &amp; Digital PR Agency Landing Page</h3>
+            <p class="text-xs text-slate-500 mt-1 line-clamp-2">High-authority landing page for digital PR campaigns, publisher distribution tiers, and client briefing intake.</p>
+          </div>
+        </div>
+
+        <!-- Real Project 6: Vietdeli Gourmet Restaurant (Wix Studio) -->
+        <div class="project-card group" data-category="wix">
+          <div class="browser-mockup">
+            <div class="browser-header">
+              <span class="browser-dot red"></span>
+              <span class="browser-dot yellow"></span>
+              <span class="browser-dot green"></span>
+              <div class="browser-url-bar">
+                <i data-lucide="lock" class="w-3 h-3 text-emerald-600 shrink-0"></i>
+                <span>https://vietdeli-restaurant.com</span>
+              </div>
+            </div>
+            <div class="browser-viewport" data-open-modal="project-wix-res">
+              <img src="assets/img/projects/Web_Wix_Res_Vietdeli_11zon.webp" alt="Vietdeli Gourmet Restaurant" class="tall-screenshot" loading="lazy">
+              <div class="viewport-overlay">
+                <span class="inspect-pill">
+                  <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Inspect Full Page
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3.5">
+            <div class="text-[11px] font-mono text-purple-600 font-semibold mb-0.5">Wix Studio • Hospitality Brand</div>
+            <h3 class="text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Vietdeli Gourmet Restaurant Website</h3>
+            <p class="text-xs text-slate-500 mt-1 line-clamp-2">Appetizing hospitality web presence featuring digital menus with dietary labels and integrated table booking.</p>
+          </div>
+        </div>
+
+        <!-- Real Project 7: Industrial Bearings Catalog (WordPress) -->
+        <div class="project-card group" data-category="wordpress">
+          <div class="browser-mockup">
+            <div class="browser-header">
+              <span class="browser-dot red"></span>
+              <span class="browser-dot yellow"></span>
+              <span class="browser-dot green"></span>
+              <div class="browser-url-bar">
+                <i data-lucide="lock" class="w-3 h-3 text-emerald-600 shrink-0"></i>
+                <span>https://vongbi-congnghiep.vn</span>
+              </div>
+            </div>
+            <div class="browser-viewport" data-open-modal="project-wp-vongbi">
+              <img src="assets/img/projects/Web_WP_vongbi_11zon.webp" alt="Industrial Bearings Parts Catalog" class="tall-screenshot" loading="lazy">
+              <div class="viewport-overlay">
+                <span class="inspect-pill">
+                  <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Inspect Full Page
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3.5">
+            <div class="text-[11px] font-mono text-emerald-600 font-semibold mb-0.5">WordPress • Industrial B2B</div>
+            <h3 class="text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Industrial Bearings &amp; Parts Catalog</h3>
+            <p class="text-xs text-slate-500 mt-1 line-clamp-2">Structured B2B mechanical components catalog with technical datasheet downloads and bulk quotation forms.</p>
+          </div>
+        </div>
+
+        <!-- Real Project 8: EdTech Testing Platform (Wix Studio) -->
+        <div class="project-card group" data-category="wix">
+          <div class="browser-mockup">
+            <div class="browser-header">
+              <span class="browser-dot red"></span>
+              <span class="browser-dot yellow"></span>
+              <span class="browser-dot green"></span>
+              <div class="browser-url-bar">
+                <i data-lucide="lock" class="w-3 h-3 text-emerald-600 shrink-0"></i>
+                <span>https://edtech-testing.io</span>
+              </div>
+            </div>
+            <div class="browser-viewport" data-open-modal="project-wix-edtech">
+              <img src="assets/img/projects/Web_Wix_Edtech_tracnghiem (3)_11zon.webp" alt="EdTech Testing Platform" class="tall-screenshot" loading="lazy">
+              <div class="viewport-overlay">
+                <span class="inspect-pill">
+                  <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Inspect Full Page
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3.5">
+            <div class="text-[11px] font-mono text-purple-600 font-semibold mb-0.5">Wix Studio • Interactive EdTech</div>
+            <h3 class="text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">EdTech Online Quiz &amp; Testing Platform</h3>
+            <p class="text-xs text-slate-500 mt-1 line-clamp-2">Distraction-free digital testing environment featuring countdown timers, instant explanations, and scoring certificates.</p>
+          </div>
+        </div>
+
+        <!-- Real Project 9: NFF Global Research Report Portal -->
+        <div class="project-card group" data-category="wix">
+          <div class="browser-mockup">
+            <div class="browser-header">
+              <span class="browser-dot red"></span>
+              <span class="browser-dot yellow"></span>
+              <span class="browser-dot green"></span>
+              <div class="browser-url-bar">
+                <i data-lucide="lock" class="w-3 h-3 text-emerald-600 shrink-0"></i>
+                <span>https://nff-global-report.org</span>
+              </div>
+            </div>
+            <div class="browser-viewport" data-open-modal="project-wix-indian">
+              <img src="assets/img/projects/Web_Wix_Indian_Report_Nff_11zon.webp" alt="NFF Global Research Report" class="tall-screenshot" loading="lazy">
+              <div class="viewport-overlay">
+                <span class="inspect-pill">
+                  <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Inspect Full Page
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3.5">
+            <div class="text-[11px] font-mono text-purple-600 font-semibold mb-0.5">Wix Studio • Research Publishing</div>
+            <h3 class="text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">NFF Global Research &amp; Report Portal</h3>
+            <p class="text-xs text-slate-500 mt-1 line-clamp-2">Executive data presentation with key takeaways, data charts, and email-gated PDF research downloads.</p>
+          </div>
+        </div>
+
+        <!-- Real Project 10: Battery Pack Hardware Web -->
+        <div class="project-card group" data-category="wix">
+          <div class="browser-mockup">
+            <div class="browser-header">
+              <span class="browser-dot red"></span>
+              <span class="browser-dot yellow"></span>
+              <span class="browser-dot green"></span>
+              <div class="browser-url-bar">
+                <i data-lucide="lock" class="w-3 h-3 text-emerald-600 shrink-0"></i>
+                <span>https://lithium-battery-pack.tech</span>
+              </div>
+            </div>
+            <div class="browser-viewport" data-open-modal="project-chiapackpin">
+              <img src="assets/img/projects/Web_chiapackpin_11zon.webp" alt="Battery Pack Engineering Web" class="tall-screenshot" loading="lazy">
+              <div class="viewport-overlay">
+                <span class="inspect-pill">
+                  <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Inspect Full Page
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3.5">
+            <div class="text-[11px] font-mono text-purple-600 font-semibold mb-0.5">Wix Studio • Hardware Tech</div>
+            <h3 class="text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Clean Energy &amp; Battery Engineering Web</h3>
+            <p class="text-xs text-slate-500 mt-1 line-clamp-2">Hardware showcase presenting exploded product views, battery cell configuration charts, and custom quotation forms.</p>
+          </div>
+        </div>
+
+        <!-- Real Project 11: Creative Agency Portfolio (Wix Studio) -->
+        <div class="project-card group" data-category="wix">
+          <div class="browser-mockup">
+            <div class="browser-header">
+              <span class="browser-dot red"></span>
+              <span class="browser-dot yellow"></span>
+              <span class="browser-dot green"></span>
+              <div class="browser-url-bar">
+                <i data-lucide="lock" class="w-3 h-3 text-emerald-600 shrink-0"></i>
+                <span>https://creative-studio-port.design</span>
+              </div>
+            </div>
+            <div class="browser-viewport" data-open-modal="project-portfolio-wix">
+              <img src="assets/img/projects/Portfolio_Wix_11zon.webp" alt="Creative Agency Portfolio" class="tall-screenshot" loading="lazy">
+              <div class="viewport-overlay">
+                <span class="inspect-pill">
+                  <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Inspect Full Page
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3.5">
+            <div class="text-[11px] font-mono text-purple-600 font-semibold mb-0.5">Wix Studio • Creative Agency</div>
+            <h3 class="text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Creative Studio &amp; Designer Portfolio</h3>
+            <p class="text-xs text-slate-500 mt-1 line-clamp-2">Visual-first agency portfolio showcasing creative direction, brand identity, and immersive case study presentations.</p>
+          </div>
+        </div>
+
+        <!-- Real Project 12: Carnival Watch Store (Shopify & SEO) -->
+        <div class="project-card group" data-category="ecommerce">
+          <div class="browser-mockup">
+            <div class="browser-header">
+              <span class="browser-dot red"></span>
+              <span class="browser-dot yellow"></span>
+              <span class="browser-dot green"></span>
+              <div class="browser-url-bar">
+                <i data-lucide="lock" class="w-3 h-3 text-emerald-600 shrink-0"></i>
+                <span>https://carnival-watches.com/shop</span>
+              </div>
+            </div>
+            <div class="browser-viewport" data-open-modal="project-carnival-watch">
+              <img src="assets/img/projects/project-1-watch-ecommerce.svg" alt="Carnival Watch Store" class="tall-screenshot" loading="lazy">
+              <div class="viewport-overlay">
+                <span class="inspect-pill">
+                  <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Inspect Full Page
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3.5">
+            <div class="text-[11px] font-mono text-amber-600 font-semibold mb-0.5">Shopify • Liquid &amp; SEO</div>
+            <h3 class="text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Carnival Timepieces Luxury Store</h3>
+            <p class="text-xs text-slate-500 mt-1 line-clamp-2">Shopify Liquid adjustments, faceted URL hygiene, and Top 1 Google rank for brand searches.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =======================================================================
+       SKILLS & TOOLCHAIN
+       ======================================================================= -->
+  <section id="skills" class="py-16 border-b border-slate-200 bg-slate-50/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mb-12">
+        <div class="text-xs font-mono font-bold uppercase tracking-widest text-blue-600 mb-1">05 // Stack &amp; Tools</div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Technical Skill Matrix</h2>
+        <p class="text-slate-600 mt-2 text-sm sm:text-base leading-relaxed">
+          Certified competencies and tools applied across web development, SEO auditing, and AI marketing automation.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <div class="clean-card p-5 border border-slate-200 bg-white">
+          <div class="w-9 h-9 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold mb-3 border border-blue-100">
+            <i data-lucide="code" class="w-4 h-4"></i>
+          </div>
+          <h3 class="text-sm font-bold text-slate-900 mb-2">Web Development</h3>
+          <ul class="text-xs text-slate-600 space-y-1.5">
+            <li class="flex items-center justify-between py-1 border-b border-slate-100">
+              <span>Shopify Liquid</span> <span class="font-mono text-blue-600 font-semibold">Themes &amp; Apps</span>
+            </li>
+            <li class="flex items-center justify-between py-1 border-b border-slate-100">
+              <span>WordPress / Elementor</span> <span class="font-mono text-blue-600 font-semibold">Child Themes</span>
+            </li>
+            <li class="flex items-center justify-between py-1 border-b border-slate-100">
+              <span>Wix Studio</span> <span class="font-mono text-blue-600 font-semibold">Interactive Web</span>
+            </li>
+            <li class="flex items-center justify-between py-1">
+              <span>HTML5, CSS3 &amp; JS</span> <span class="font-mono text-emerald-600 font-semibold">Semantic</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="clean-card p-5 border border-slate-200 bg-white">
+          <div class="w-9 h-9 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold mb-3 border border-emerald-100">
+            <i data-lucide="search" class="w-4 h-4"></i>
+          </div>
+          <h3 class="text-sm font-bold text-slate-900 mb-2">Technical SEO</h3>
+          <ul class="text-xs text-slate-600 space-y-1.5">
+            <li class="flex items-center justify-between py-1 border-b border-slate-100">
+              <span>Screaming Frog</span> <span class="font-mono text-emerald-600 font-semibold">Crawl Audits</span>
+            </li>
+            <li class="flex items-center justify-between py-1 border-b border-slate-100">
+              <span>Google Search Console</span> <span class="font-mono text-emerald-600 font-semibold">Index Triage</span>
+            </li>
+            <li class="flex items-center justify-between py-1 border-b border-slate-100">
+              <span>Schema.org JSON-LD</span> <span class="font-mono text-emerald-600 font-semibold">Rich Results</span>
+            </li>
+            <li class="flex items-center justify-between py-1">
+              <span>Ahrefs &amp; Semrush</span> <span class="font-mono text-slate-500 font-semibold">Topic Clusters</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="clean-card p-5 border border-slate-200 bg-white">
+          <div class="w-9 h-9 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center font-bold mb-3 border border-purple-100">
+            <i data-lucide="zap" class="w-4 h-4"></i>
+          </div>
+          <h3 class="text-sm font-bold text-slate-900 mb-2">AI Automation &amp; Data</h3>
+          <ul class="text-xs text-slate-600 space-y-1.5">
+            <li class="flex items-center justify-between py-1 border-b border-slate-100">
+              <span>Make &amp; Zapier</span> <span class="font-mono text-purple-600 font-semibold">AI Webhooks</span>
+            </li>
+            <li class="flex items-center justify-between py-1 border-b border-slate-100">
+              <span>Google Tag Manager</span> <span class="font-mono text-purple-600 font-semibold">Custom JS</span>
+            </li>
+            <li class="flex items-center justify-between py-1 border-b border-slate-100">
+              <span>Google Analytics 4</span> <span class="font-mono text-purple-600 font-semibold">Event Funnels</span>
+            </li>
+            <li class="flex items-center justify-between py-1">
+              <span>Meta &amp; TikTok Pixels</span> <span class="font-mono text-slate-500 font-semibold">Deduplication</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="clean-card p-5 border border-slate-200 bg-white">
+          <div class="w-9 h-9 rounded-lg bg-rose-50 text-rose-600 flex items-center justify-center font-bold mb-3 border border-rose-100">
+            <i data-lucide="palette" class="w-4 h-4"></i>
+          </div>
+          <h3 class="text-sm font-bold text-slate-900 mb-2">Design &amp; Languages</h3>
+          <ul class="text-xs text-slate-600 space-y-1.5">
+            <li class="flex items-center justify-between py-1 border-b border-slate-100">
+              <span>CUSC Graphic Design</span> <span class="font-mono text-rose-600 font-semibold">Certified</span>
+            </li>
+            <li class="flex items-center justify-between py-1 border-b border-slate-100">
+              <span>English &amp; Vietnamese</span> <span class="font-mono text-blue-600 font-semibold">B2 &amp; Native</span>
+            </li>
+            <li class="flex items-center justify-between py-1 border-b border-slate-100">
+              <span>Canva &amp; Figma</span> <span class="font-mono text-slate-500 font-semibold">Layouts</span>
+            </li>
+            <li class="flex items-center justify-between py-1">
+              <span>Video Editing</span> <span class="font-mono text-slate-500 font-semibold">Short-form</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =======================================================================
+       CONTACT SECTION (DIRECT DETAILS FROM CV)
+       ======================================================================= -->
+  <section id="contact" class="py-16 bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <div class="lg:col-span-7 space-y-4">
+          <div class="text-xs font-mono font-bold uppercase tracking-widest text-blue-400">06 // Let's Collaborate</div>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight">
+            Ready to Build, Rank, or Automate?
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-xl">
+            Whether you need a new website built (Shopify, WordPress, Wix), crawl issues diagnosed, Schema markup deployed, or AI automation workflows configured, let's talk.
+          </p>
+
+          <div class="space-y-3 pt-2 text-sm text-slate-300">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="text-xs text-slate-400 block">Direct Email:</span>
+                <a href="mailto:duongtk.work@gmail.com" class="text-white font-mono font-semibold hover:text-blue-400">duongtk.work@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="text-xs text-slate-400 block">Phone / Zalo:</span>
+                <span class="text-white font-mono font-semibold">0835575440</span>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0">
+                <i data-lucide="linkedin" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="text-xs text-slate-400 block">LinkedIn Profile:</span>
+                <a href="https://www.linkedin.com/in/duong-kieu-tram-duong-t-690133244" target="_blank" rel="noopener noreferrer" class="text-white hover:text-blue-400 font-semibold underline">
+                  linkedin.com/in/duong-kieu-tram-duong-t-690133244
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Direct Inquiry Action Box -->
+        <div class="lg:col-span-5 bg-slate-800/80 p-6 sm:p-7 rounded-2xl border border-slate-700 space-y-3.5">
+          <h3 class="text-base font-bold text-white">Direct Communication</h3>
+          <p class="text-xs text-slate-400">
+            Send an inquiry directly or copy my email address. Guaranteed prompt reply.
+          </p>
+
+          <a href="mailto:duongtk.work@gmail.com?subject=Project%20Inquiry%20from%20Portfolio" class="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs uppercase tracking-wider transition-colors flex items-center justify-center gap-2">
+            <i data-lucide="send" class="w-4 h-4"></i>
+            <span>Send Email to Duong</span>
+          </a>
+
+          <button data-copy="duongtk.work@gmail.com" class="copy-trigger w-full py-3 rounded-xl bg-slate-700/80 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition-colors flex items-center justify-center gap-2 border border-slate-600">
+            <i data-lucide="copy" class="w-4 h-4 text-emerald-400"></i>
+            <span>Copy Email (duongtk.work@gmail.com)</span>
+          </button>
+
+          <div class="text-center text-[11px] text-slate-400 pt-1 font-mono">
+            Location: Can Tho, Vietnam • Flexible for Global Time Zones
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =======================================================================
+       FOOTER
+       ======================================================================= -->
+  <footer class="py-6 bg-slate-950 text-slate-500 text-xs border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div>
+        <strong class="text-slate-300">Duong</strong> • Freelance Web Specialist, SEO &amp; AI Automation
+      </div>
+      <div class="flex items-center gap-4 text-slate-400">
+        <a href="#hero" class="hover:text-white">Top ↑</a>
+        <a href="#case-studies" class="hover:text-white">Case Studies</a>
+        <a href="#showcase" class="hover:text-white">Showcase</a>
+        <a href="#contact" class="hover:text-white">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- =======================================================================
+       FULL-SCREEN INSPECTION MODAL (LIGHTBOX)
+       ======================================================================= -->
+  <div id="showcaseModal" class="modal-backdrop" aria-hidden="true" role="dialog">
+    <div class="modal-container">
+      
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <div>
+          <span id="modalCategory" class="text-xs font-mono font-bold text-blue-600 uppercase tracking-wider block"></span>
+          <h3 id="modalTitle" class="text-base sm:text-lg font-bold text-slate-900"></h3>
+        </div>
+        <button id="modalCloseBtn" class="p-1.5 rounded-lg text-slate-500 hover:text-slate-800 hover:bg-slate-200 transition-colors" aria-label="Close modal">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        
+        <!-- Left: Scrollable Full Page Image -->
+        <div class="modal-preview-pane">
+          <img id="modalImage" src="" alt="Full Preview" class="shadow-sm">
+        </div>
+
+        <!-- Right: Details Sidebar -->
+        <div class="modal-sidebar space-y-5">
+          
+          <div>
+            <h4 class="text-xs font-mono uppercase tracking-wider text-slate-500 font-bold mb-2" data-i18n="modal_outcomes">Verified Outcomes</h4>
+            <div id="modalMetrics" class="space-y-2"></div>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-mono uppercase tracking-wider text-slate-500 font-bold mb-1.5" data-i18n="modal_challenge">Challenge &amp; Bottleneck</h4>
+            <p id="modalChallenge" class="text-xs text-slate-600 leading-relaxed"></p>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-mono uppercase tracking-wider text-slate-500 font-bold mb-1.5" data-i18n="modal_solution">Engineered Solution</h4>
+            <p id="modalSolution" class="text-xs text-slate-600 leading-relaxed"></p>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-mono uppercase tracking-wider text-slate-500 font-bold mb-1.5" data-i18n="modal_tech">Technologies</h4>
+            <div id="modalTechStack" class="flex flex-wrap gap-1"></div>
+          </div>
+
+          <div class="pt-3 border-t border-slate-100 space-y-2">
+            <a id="modalExternalLink" href="#" target="_blank" rel="noopener noreferrer" class="w-full py-2 rounded-lg bg-blue-50 text-blue-600 hover:bg-blue-100 text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 transition-colors border border-blue-200">
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              <span data-i18n="modal_open_raw">Open Raw Image in New Tab</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">
+    <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+    <span class="toast-msg">Copied to clipboard!</span>
+  </div>
+
+  <!-- Main JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
