@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Hồ Sơ Dự Án: Butler Umzüge GmbH | Dương - Freelance Web & SEO Specialist</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap');
+
+    @page {
+      size: A4 portrait;
+      margin: 10mm 12mm 10mm 12mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #0f172a;
+      background: #ffffff;
+      margin: 0;
+      padding: 0;
+      font-size: 10pt;
+      line-height: 1.48;
+    }
+
+    .page {
+      width: 100%;
+      min-height: 276mm;
+      max-height: 276mm;
+      page-break-after: always;
+      break-after: page;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+
+    .page:last-child {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    /* Header Bar */
+    .header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 8px;
+      border-bottom: 1.5px solid #e2e8f0;
+      margin-bottom: 12px;
+    }
+
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-badge {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background: #2563eb;
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-text {
+      font-weight: 800;
+      font-size: 13.5px;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+    }
+
+    .logo-sub {
+      font-size: 8.5px;
+      font-family: 'JetBrains Mono', monospace;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .upwork-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      color: #15803d;
+      font-size: 8.5px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .upwork-pill .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #16a34a;
+    }
+
+    /* Footer Bar */
+    .footer-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 7px;
+      border-top: 1px solid #e2e8f0;
+      font-size: 8px;
+      color: #64748b;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .footer-right {
+      color: #2563eb;
+      font-weight: 700;
+    }
+
+    h1, h2, h3, h4, p {
+      margin: 0;
+    }
+
+    /* Project Banner */
+    .project-banner {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #ffffff;
+      border-radius: 12px;
+      padding: 14px 18px;
+      margin-bottom: 12px;
+      border: 1px solid #334155;
+    }
+
+    .banner-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8.5px;
+      font-weight: 700;
+      color: #60a5fa;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
+    }
+
+    .banner-title {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+      margin-bottom: 6px;
+      color: #ffffff;
+    }
+
+    .banner-desc {
+      font-size: 9.5px;
+      color: #cbd5e1;
+      line-height: 1.45;
+    }
+
+    /* KPI Row */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 9px;
+      margin-bottom: 12px;
+    }
+
+    .kpi-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 8px 10px;
+      text-align: center;
+    }
+
+    .kpi-num {
+      font-size: 16px;
+      font-weight: 800;
+      color: #2563eb;
+      line-height: 1.15;
+    }
+
+    .kpi-label {
+      font-size: 8px;
+      font-weight: 700;
+      color: #475569;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    /* Summary 2-Col */
+    .summary-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .info-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-left: 3.5px solid #2563eb;
+      border-radius: 8px;
+      padding: 10px 12px;
+    }
+
+    .info-card.emerald {
+      border-left-color: #059669;
+    }
+
+    .info-title {
+      font-size: 10.5px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .info-text {
+      font-size: 9px;
+      color: #334155;
+      line-height: 1.48;
+    }
+
+    /* Image Showcase Frame */
+    .showcase-box {
+      background: #f8fafc;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+
+    .browser-bar {
+      background: #e2e8f0;
+      padding: 5px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #cbd5e1;
+    }
+
+    .browser-dots {
+      display: flex;
+      gap: 5px;
+    }
+
+    .b-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+    }
+    .b-dot.r { background: #ef4444; }
+    .b-dot.y { background: #f59e0b; }
+    .b-dot.g { background: #10b981; }
+
+    .browser-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8px;
+      font-weight: 700;
+      color: #334155;
+    }
+
+    .img-container {
+      width: 100%;
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .img-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .caption-box {
+      padding: 9px 12px;
+      background: #ffffff;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    .caption-title {
+      font-size: 10.5px;
+      font-weight: 800;
+      color: #1e40af;
+      margin-bottom: 3px;
+    }
+
+    .caption-desc {
+      font-size: 8.8px;
+      color: #334155;
+      line-height: 1.45;
+    }
+
+    /* Split Showcase for Square Screenshots */
+    .split-showcase {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 12px;
+      align-items: stretch;
+      background: #ffffff;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 12px;
+    }
+
+    .split-img-wrap {
+      background: #f1f5f9;
+      border-right: 1px solid #e2e8f0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .split-img-wrap img {
+      width: 100%;
+      height: 295px;
+      object-fit: contain;
+      background: #ffffff;
+      display: block;
+    }
+
+    .split-details {
+      padding: 12px 14px 12px 2px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .badge-step {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8px;
+      font-weight: 700;
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+      padding: 2px 7px;
+      border-radius: 4px;
+      margin-bottom: 5px;
+      width: fit-content;
+    }
+
+    .badge-step.emerald {
+      background: #ecfdf5;
+      color: #047857;
+      border-color: #a7f3d0;
+    }
+
+    .badge-step.purple {
+      background: #faf5ff;
+      color: #6d28d9;
+      border-color: #ddd6fe;
+    }
+
+    .split-title {
+      font-size: 12.5px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .split-list {
+      margin: 0;
+      padding-left: 14px;
+      font-size: 8.8px;
+      color: #334155;
+      line-height: 1.52;
+    }
+
+    .split-list li {
+      margin-bottom: 5px;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 6px;
+    }
+
+    .code-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 7.5px;
+      font-weight: 600;
+      background: #f1f5f9;
+      color: #334155;
+      border: 1px solid #cbd5e1;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* Upwork Compliance Footer Box */
+    .upwork-box {
+      background: #f0fdf4;
+      border: 1.5px solid #86efac;
+      border-radius: 10px;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .upwork-badge {
+      background: #16a34a;
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 11px;
+      padding: 8px 12px;
+      border-radius: 7px;
+      text-align: center;
+      flex-shrink: 0;
+      letter-spacing: 0.02em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- =======================================================================
+       TRANG 1: TỔNG QUAN DỰ ÁN & PHỄU CHUYỂN ĐỔI HERO SECTION
+       ======================================================================= -->
+  <div class="page">
+    <div>
+      <div class="header-bar">
+        <div class="header-logo">
+          <div class="logo-badge">D</div>
+          <div>
+            <div class="logo-text">DƯƠNG // HỒ SƠ DỰ ÁN TIÊU BIỂU (CASE STUDY)</div>
+            <div class="logo-sub">Phát triển Web WordPress • Local Entity SEO • Tối ưu Chuyển đổi (CRO)</div>
+          </div>
+        </div>
+        <div class="upwork-pill">
+          <span class="dot"></span>
+          Upwork Verified Portfolio
+        </div>
+      </div>
+
+      <!-- Project Title Banner -->
+      <div class="project-banner">
+        <div class="banner-eyebrow">Dự án Thực tế // Thị trường CHLB Đức &amp; Châu Âu (B2B &amp; B2C Relocation)</div>
+        <h1 class="banner-title">BUTLER UMZÜGE GMBH — Kiến trúc Website Dịch vụ Chuyển nhà &amp; Hệ thống Local SEO Toàn Nước Đức</h1>
+        <p class="banner-desc">
+          Thiết kế và phát triển WordPress Child Theme tối ưu tốc độ tải di động, tích hợp phễu lọc khách hàng thông minh 3 bước (Multi-Step Lead Qualification) và cấu trúc thực thể Schema.org JSON-LD giúp doanh nghiệp phủ sóng tìm kiếm địa phương tại Berlin, Brandenburg và toàn CHLB Đức.
+        </p>
+      </div>
+
+      <!-- 4 KPI Metrics -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-num">100%</div>
+          <div class="kpi-label">Rich Results Hợp lệ</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-num">-40%</div>
+          <div class="kpi-label">Giảm độ nặng DOM</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-num">3 Bước</div>
+          <div class="kpi-label">Phễu lọc Lead tự động</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-num">100% DSGVO</div>
+          <div class="kpi-label">Chuẩn bảo mật Châu Âu</div>
+        </div>
+      </div>
+
+      <!-- Challenge & Solution Grid -->
+      <div class="summary-grid">
+        <div class="info-card">
+          <div class="info-title">01. Bài toán &amp; Thách thức</div>
+          <p class="info-text">
+            • <strong>Đặc thù thị trường Đức:</strong> Khách hàng chuyển nhà tại Đức bao gồm cả cá nhân, doanh nghiệp và người có chế độ bảo hiểm chăm sóc (<em>Pflegegrad / Krankenkasse</em>). Các biểu mẫu liên hệ thông thường gây tỷ lệ thoát trang cao.<br>
+            • <strong>Bài toán SEO Địa phương:</strong> Cần phủ sóng từ khóa dịch vụ chuyển nhà trên hàng chục thành phố lớn nhỏ mà không làm phình to mã nguồn DOM hay giảm tốc độ tải trên thiết bị di động.
+          </p>
+        </div>
+        <div class="info-card emerald">
+          <div class="info-title">02. Giải pháp Kỹ thuật &amp; UX/UI</div>
+          <p class="info-text">
+            • <strong>Phễu Thu thập Lead 3 Bước:</strong> Thiết kế khung <em>Qualifizierung</em> ngay trên màn hình đầu tiên (Above the Fold) giúp phân loại nhu cầu và quỹ bảo hiểm tức thì.<br>
+            • <strong>WordPress Child Theme &amp; Schema:</strong> Loại bỏ script dư thừa, lập trình cấu trúc JSON-LD lồng nhau (<code>MovingCompany</code> + <code>LocalBusiness</code>) và cụm liên kết nội bộ theo địa giới hành chính.
+          </p>
+        </div>
+      </div>
+
+      <!-- Image 1: Hero Section (Chitietduan_Butler (2).png) -->
+      <div class="showcase-box">
+        <div class="browser-bar">
+          <div class="browser-dots">
+            <span class="b-dot r"></span>
+            <span class="b-dot y"></span>
+            <span class="b-dot g"></span>
+          </div>
+          <div class="browser-label">GIAO DIỆN THỰC TẾ 01 // HERO SECTION &amp; PHỄU LỌC KHÁCH HÀNG 3 BƯỚC (ABOVE THE FOLD)</div>
+          <div style="font-size: 8px; color: #475569; font-family: 'JetBrains Mono';">Chitietduan_Butler (2).png</div>
+        </div>
+        <div class="img-container">
+          <img src="assets/img/projects/Chitietduan_Butler (2).png" alt="Butler Umzüge Hero Section & Lead Form">
+        </div>
+        <div class="caption-box">
+          <div class="caption-title">Điểm nhấn Thiết kế Chuyển đổi (CRO) tại Màn hình Đầu tiên:</div>
+          <p class="caption-desc">
+            • <strong>Phễu định danh khách hàng (Schritt 1 von 3 - Qualifizierung):</strong> Thu thập chính xác tình trạng cấp độ chăm sóc (<em>Pflegegrad 1-5</em>), tên quỹ bảo hiểm (<em>Krankenkasse</em>) và loại hình chuyển nhà trước khi chuyển sang bước báo giá, cam kết <em>100% DSGVO-konform</em>.<br>
+            • <strong>Hệ thống Điều hướng &amp; Quick-Action:</strong> Thanh Header đa ngôn ngữ (DE/EN) rõ ràng kết hợp cụm 3 nút nổi cố định bên phải màn hình (Gọi nhanh, Đặt xe, Định vị) giúp khách hàng thao tác tức thì ở mọi vị trí cuộn trang.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>HỒ SƠ DỰ ÁN: BUTLER UMZÜGE GMBH • THỰC HIỆN BỞI DƯƠNG</span>
+      <span class="footer-right">TRANG 01 / 03 // TỔNG QUAN &amp; HERO FUNNEL</span>
+    </div>
+  </div>
+
+
+  <!-- =======================================================================
+       TRANG 2: DANH MỤC DỊCH VỤ & KIẾN TRÚC SILO LOCAL SEO TOÀN NƯỚC ĐỨC
+       ======================================================================= -->
+  <div class="page">
+    <div>
+      <div class="header-bar">
+        <div class="header-logo">
+          <div class="logo-badge">D</div>
+          <div>
+            <div class="logo-text">DƯƠNG // BÓC TÁCH KIẾN TRÚC GIAO DIỆN &amp; LOCAL SEO</div>
+            <div class="logo-sub">Dự án: Butler Umzüge GmbH (WordPress &amp; Semantic SEO)</div>
+          </div>
+        </div>
+        <div class="upwork-pill">
+          <span class="dot"></span>
+          Upwork Verified Portfolio
+        </div>
+      </div>
+
+      <!-- Section 2: Service Palette (Chitietduan_Butler (3).png) -->
+      <div class="split-showcase">
+        <div class="split-img-wrap">
+          <div class="browser-bar">
+            <div class="browser-dots">
+              <span class="b-dot r"></span>
+              <span class="b-dot y"></span>
+              <span class="b-dot g"></span>
+            </div>
+            <div class="browser-label">02 // HỆ THỐNG DANH MỤC DỊCH VỤ</div>
+          </div>
+          <img src="assets/img/projects/Chitietduan_Butler (3).png" alt="Butler Umzüge Service Palette">
+        </div>
+        <div class="split-details">
+          <span class="badge-step">UI/UX &amp; CẤU TRÚC DỊCH VỤ</span>
+          <h2 class="split-title">Phân luồng 7 Nhóm Dịch vụ B2C &amp; B2B Trực quan</h2>
+          <ul class="split-list">
+            <li><strong>Cấu trúc Card Grid chuẩn mực:</strong> Trình bày 7 gói dịch vụ mũi nhọn: Chuyển nhà cá nhân (<em>Privatumzug</em>), Văn phòng (<em>Büroumzug</em>), Cơ quan công quyền (<em>Behördenumzug</em>), Doanh nghiệp (<em>Firmenumzug</em>), Nhà xưởng (<em>Gewerbeumzug</em>), Sinh viên (<em>Studentenumzug</em>) và Chuyển nhà hỏa tốc (<em>Express Umzug</em>).</li>
+            <li><strong>Nhận diện Thương hiệu Đồng nhất:</strong> Kết hợp tông màu Vàng Đồng ấm áp, chuyên nghiệp với hình ảnh thực tế từng phân khúc, giúp khách hàng nhận diện đúng dịch vụ chỉ trong 3 giây.</li>
+            <li><strong>Tối ưu Liên kết Nội bộ (Anchor UX):</strong> Mỗi thẻ dịch vụ đều tích hợp icon định danh và nút điều hướng <em>"Mehr erfahren →"</em> dẫn trực tiếp vào trang đích chuyên sâu.</li>
+          </ul>
+          <div class="tag-row">
+            <span class="code-pill">Responsive Card Grid</span>
+            <span class="code-pill">B2B &amp; B2C Segmentation</span>
+            <span class="code-pill">Thumb-Friendly UI</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 3: Nationwide City Silo (Chitietduan_Butler (4).png) -->
+      <div class="split-showcase" style="margin-bottom: 0;">
+        <div class="split-img-wrap">
+          <div class="browser-bar">
+            <div class="browser-dots">
+              <span class="b-dot r"></span>
+              <span class="b-dot y"></span>
+              <span class="b-dot g"></span>
+            </div>
+            <div class="browser-label">03 // CẤU TRÚC SILO LOCAL SEO TOÀN QUỐC</div>
+          </div>
+          <img src="assets/img/projects/Chitietduan_Butler (4).png" alt="Butler Umzüge Local SEO Germany Cities">
+        </div>
+        <div class="split-details">
+          <span class="badge-step emerald">TECHNICAL &amp; SEMANTIC LOCAL SEO</span>
+          <h2 class="split-title">Mạng lưới Landing Page Tỉnh thành Toàn CHLB Đức (A–S)</h2>
+          <ul class="split-list">
+            <li><strong>Ma trận Chỉ mục Thành phố (Geo-Silo Directory):</strong> Thiết kế cụm nút điều hướng theo bảng chữ cái (Aachen, Augsburg, Berlin, Bonn, Brandenburg, Dortmund, Dresden, Frankfurt, Hamburg, München, Stuttgart...) giúp phân bổ đều sức mạnh liên kết (Link Equity) tới hàng chục trang Local SEO.</li>
+            <li><strong>Tối ưu Thực thể &amp; Ngữ nghĩa:</strong> Khối nội dung <em>"Regionaler Umzug"</em> lồng ghép tự nhiên các từ khóa thực thể dịch vụ đi kèm (dọn dẹp <em>Entrümpelung</em>, vật tư đóng gói <em>Umzugsmaterial</em>, tháo lắp nội thất).</li>
+            <li><strong>Mở rộng Tệp Khách hàng Ghép chuyến:</strong> Hộp <em>"Nicht nur für Umzügler"</em> bên phải khai thác thêm nhu cầu vận chuyển hàng lẻ từ A đến B (<em>Beiladung</em>), tối ưu hóa công suất đội xe.</li>
+          </ul>
+          <div class="tag-row">
+            <span class="code-pill">Geo-Targeted Silos</span>
+            <span class="code-pill">Internal Link Graph</span>
+            <span class="code-pill">Schema areaServed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>HỒ SƠ DỰ ÁN: BUTLER UMZÜGE GMBH • THỰC HIỆN BỞI DƯƠNG</span>
+      <span class="footer-right">TRANG 02 / 03 // DANH MỤC DỊCH VỤ &amp; LOCAL SEO</span>
+    </div>
+  </div>
+
+
+  <!-- =======================================================================
+       TRANG 3: ĐIỂM CHẠM TƯ VẤN, LƯU KHO & TỔNG KẾT KỸ THUẬT
+       ======================================================================= -->
+  <div class="page">
+    <div>
+      <div class="header-bar">
+        <div class="header-logo">
+          <div class="logo-badge">D</div>
+          <div>
+            <div class="logo-text">DƯƠNG // TỐI ƯU ĐIỂM CHẠM CHUYỂN ĐỔI &amp; TỔNG KẾT KỸ THUẬT</div>
+            <div class="logo-sub">Dự án: Butler Umzüge GmbH (WordPress &amp; CRO)</div>
+          </div>
+        </div>
+        <div class="upwork-pill">
+          <span class="dot"></span>
+          Upwork Verified Portfolio
+        </div>
+      </div>
+
+      <!-- Section 4: Consultation & Storage Service (Chitietduan_Butler (1).png) -->
+      <div class="split-showcase">
+        <div class="split-img-wrap">
+          <div class="browser-bar">
+            <div class="browser-dots">
+              <span class="b-dot r"></span>
+              <span class="b-dot y"></span>
+              <span class="b-dot g"></span>
+            </div>
+            <div class="browser-label">04 // BANNER TƯ VẤN &amp; DỊCH VỤ LƯU KHO</div>
+          </div>
+          <img src="assets/img/projects/Chitietduan_Butler (1).png" alt="Butler Umzüge Consultation & Storage">
+        </div>
+        <div class="split-details">
+          <span class="badge-step purple">TRUST BUILDING &amp; RETENTION UX</span>
+          <h2 class="split-title">Banner Tư vấn Cá nhân hóa &amp; Giải pháp Lưu kho Hàng hóa</h2>
+          <ul class="split-list">
+            <li><strong>Khối Kêu gọi Tư vấn Trực tiếp (<em>Individuelle Beratung</em>):</strong> Thiết kế bo góc mềm mại với hình nền thực tế có độ tương phản cao, đặt nút CTA nổi bật ngay trung tâm giúp thúc đẩy cuộc gọi tư vấn trực tiếp.</li>
+            <li><strong>Giải quyết Nút thắt Lưu trữ (<em>Sichere Lagerflächen</em>):</strong> Trình bày rõ giải pháp kho bãi an toàn cho khách hàng chưa kịp nhận nhà hoặc văn phòng mới.</li>
+            <li><strong>Thẻ Mẹo Chuyên gia (<em>Unser Tipp</em>):</strong> Thiết kế dạng Callout Card xếp lớp (Overlapping Box) đưa lời khuyên thanh lý đồ đạc dư thừa trước khi chuyển nhà, gia tăng thiện cảm và giữ chân người đọc lâu hơn trên trang.</li>
+          </ul>
+          <div class="tag-row">
+            <span class="code-pill">High-Contrast CTA</span>
+            <span class="code-pill">Overlapping Callout UI</span>
+            <span class="code-pill">Cross-Sell Storage</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technical Architecture Summary -->
+      <div class="card" style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 10px; padding: 12px 15px; margin-bottom: 12px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 8.5px; font-weight: 700; color: #2563eb; text-transform: uppercase; margin-bottom: 6px;">
+          05 // Tổng kết Hạng mục Kỹ thuật &amp; Giá trị Bàn giao (Technical Deliverables)
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; font-size: 8.8px; color: #334155; line-height: 1.48;">
+          <div style="background: #ffffff; padding: 9px 11px; border-radius: 8px; border: 1px solid #e2e8f0;">
+            <strong style="color: #0f172a; display: block; margin-bottom: 3px; font-size: 9.5px;">1. Lập trình Giao diện WordPress</strong>
+            • Xây dựng Child Theme tinh gọn, loại bỏ hoàn toàn các thư viện JS/CSS gây nghẽn hiển thị.<br>
+            • Tối ưu hiển thị Mobile-First trên mọi kích thước màn hình smartphone và tablet.
+          </div>
+          <div style="background: #ffffff; padding: 9px 11px; border-radius: 8px; border: 1px solid #e2e8f0;">
+            <strong style="color: #0f172a; display: block; margin-bottom: 3px; font-size: 9.5px;">2. Schema &amp; Technical SEO</strong>
+            • Triển khai JSON-LD <code>MovingCompany</code> &amp; <code>LocalBusiness</code> đạt 100% hợp lệ trên Google Rich Results Test.<br>
+            • Thiết lập kiến trúc Silo địa phương phủ sóng các bang và thành phố tại Đức.
+          </div>
+          <div style="background: #ffffff; padding: 9px 11px; border-radius: 8px; border: 1px solid #e2e8f0;">
+            <strong style="color: #0f172a; display: block; margin-bottom: 3px; font-size: 9.5px;">3. Tối ưu Chuyển đổi (CRO)</strong>
+            • Tích hợp phễu lọc khách hàng 3 bước giúp đội ngũ kinh doanh tiết kiệm thời gian sàng lọc.<br>
+            • Hệ thống nút CTA nổi và điểm chạm tư vấn bố trí xuyên suốt hành trình cuộn trang.
+          </div>
+        </div>
+      </div>
+
+      <!-- Upwork Policy Compliant Box -->
+      <div class="upwork-box">
+        <div class="upwork-badge">
+          UPWORK<br>VERIFIED
+        </div>
+        <div style="font-size: 8.8px; color: #14532d; line-height: 1.48;">
+          <strong style="font-size: 10.5px; color: #052e16; display: block; margin-bottom: 2px;">
+            Sẵn sàng Triển khai Dự án WordPress, Local SEO &amp; CRO Tiếp theo của Bạn trên Upwork
+          </strong>
+          Tài liệu hồ sơ dự án này tuân thủ tuyệt đối Chính sách của Upwork (Upwork Terms of Service — Không chứa thông tin liên hệ ngoài nền tảng). Mọi trao đổi chi tiết về yêu cầu kỹ thuật, báo giá và cột mốc triển khai (Milestones) vui lòng thực hiện trực tiếp qua <strong>Upwork Messages</strong>.
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>HỒ SƠ DỰ ÁN: BUTLER UMZÜGE GMBH • THỰC HIỆN BỞI DƯƠNG</span>
+      <span class="footer-right">TRANG 03 / 03 // KẾT QUẢ &amp; HỢP TÁC TRÊN UPWORK</span>
+    </div>
+  </div>
+
+</body>
+</html>

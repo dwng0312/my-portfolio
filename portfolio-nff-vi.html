@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Hồ Sơ Dự Án: No Filter Finance (NFF) | Dương - Freelance Web & CRO Specialist</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap');
+
+    @page {
+      size: A4 portrait;
+      margin: 10mm 12mm 10mm 12mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #0f172a;
+      background: #ffffff;
+      margin: 0;
+      padding: 0;
+      font-size: 10pt;
+      line-height: 1.48;
+    }
+
+    .page {
+      width: 100%;
+      min-height: 276mm;
+      max-height: 276mm;
+      page-break-after: always;
+      break-after: page;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+
+    .page:last-child {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    /* Header Bar */
+    .header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 8px;
+      border-bottom: 1.5px solid #e2e8f0;
+      margin-bottom: 11px;
+    }
+
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-badge {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background: #2563eb;
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-text {
+      font-weight: 800;
+      font-size: 13.5px;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+    }
+
+    .logo-sub {
+      font-size: 8.5px;
+      font-family: 'JetBrains Mono', monospace;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .upwork-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      color: #15803d;
+      font-size: 8.5px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .upwork-pill .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #16a34a;
+    }
+
+    /* Footer Bar */
+    .footer-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 7px;
+      border-top: 1px solid #e2e8f0;
+      font-size: 8px;
+      color: #64748b;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .footer-right {
+      color: #2563eb;
+      font-weight: 700;
+    }
+
+    h1, h2, h3, h4, p {
+      margin: 0;
+    }
+
+    /* Project Banner */
+    .project-banner {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+      color: #ffffff;
+      border-radius: 12px;
+      padding: 13px 18px;
+      margin-bottom: 11px;
+      border: 1px solid #312e81;
+    }
+
+    .banner-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8.5px;
+      font-weight: 700;
+      color: #fb923c;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 3px;
+    }
+
+    .banner-title {
+      font-size: 17.5px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+      margin-bottom: 5px;
+      color: #ffffff;
+    }
+
+    .banner-desc {
+      font-size: 9.2px;
+      color: #cbd5e1;
+      line-height: 1.45;
+    }
+
+    /* Page 1 Main Layout: Left Analysis + Right Full-Size Image */
+    .page1-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .kpi-grid-2x2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .kpi-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 8px 10px;
+    }
+
+    .kpi-num {
+      font-size: 14px;
+      font-weight: 800;
+      color: #2563eb;
+      line-height: 1.2;
+    }
+
+    .kpi-label {
+      font-size: 8px;
+      font-weight: 700;
+      color: #475569;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .info-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-left: 3.5px solid #2563eb;
+      border-radius: 8px;
+      padding: 9px 12px;
+      margin-bottom: 9px;
+    }
+
+    .info-card.emerald {
+      border-left-color: #059669;
+    }
+
+    .info-card.purple {
+      border-left-color: #7c3aed;
+    }
+
+    .info-card.amber {
+      border-left-color: #ea580c;
+    }
+
+    .info-title {
+      font-size: 10px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .info-text {
+      font-size: 8.8px;
+      color: #334155;
+      line-height: 1.48;
+    }
+
+    .info-list {
+      margin: 0;
+      padding-left: 14px;
+      font-size: 8.8px;
+      color: #334155;
+      line-height: 1.48;
+    }
+
+    .info-list li {
+      margin-bottom: 3.5px;
+    }
+
+    /* Full-Size Browser Mockup Column */
+    .fullsize-frame {
+      background: #0f172a;
+      border: 1.5px solid #334155;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.12);
+    }
+
+    .browser-bar {
+      background: #1e293b;
+      padding: 5px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #334155;
+    }
+
+    .browser-dots {
+      display: flex;
+      gap: 4px;
+    }
+
+    .b-dot {
+      width: 6.5px;
+      height: 6.5px;
+      border-radius: 50%;
+    }
+    .b-dot.r { background: #ef4444; }
+    .b-dot.y { background: #f59e0b; }
+    .b-dot.g { background: #10b981; }
+
+    .browser-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 7.5px;
+      font-weight: 700;
+      color: #e2e8f0;
+    }
+
+    .fullsize-img-box {
+      width: 100%;
+      height: 204mm;
+      background: #0f172a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      padding: 4px;
+    }
+
+    .fullsize-img-box img {
+      height: 100%;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+      display: block;
+      border-radius: 4px;
+    }
+
+    /* Pages 2 & 3 Zoomed Full-Size Crops + Annotations */
+    .zoom-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .zoom-viewport {
+      border: 1.5px solid #cbd5e1;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #0f172a;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .crop-window-top {
+      width: 100%;
+      height: 234mm;
+      overflow: hidden;
+      position: relative;
+      background: #0f172a;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .crop-window-top img {
+      height: 445mm;
+      width: auto;
+      display: block;
+      margin-top: 0;
+    }
+
+    .crop-window-bottom {
+      width: 100%;
+      height: 204mm;
+      overflow: hidden;
+      position: relative;
+      background: #0f172a;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    .crop-window-bottom img {
+      height: 400mm;
+      width: auto;
+      display: block;
+    }
+
+    .annotation-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .step-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 9px;
+      padding: 10px 12px;
+      margin-bottom: 9px;
+    }
+
+    .step-badge {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 7.5px;
+      font-weight: 700;
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-bottom: 4px;
+    }
+
+    .step-badge.orange {
+      background: #fff7ed;
+      color: #c2410c;
+      border-color: #fed7aa;
+    }
+
+    .step-badge.emerald {
+      background: #ecfdf5;
+      color: #047857;
+      border-color: #a7f3d0;
+    }
+
+    .step-badge.purple {
+      background: #faf5ff;
+      color: #6d28d9;
+      border-color: #ddd6fe;
+    }
+
+    .step-title {
+      font-size: 11px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+
+    .step-desc {
+      font-size: 8.6px;
+      color: #334155;
+      line-height: 1.46;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 6px;
+    }
+
+    .code-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 7.5px;
+      font-weight: 600;
+      background: #ffffff;
+      color: #334155;
+      border: 1px solid #cbd5e1;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* Upwork Compliance Box */
+    .upwork-box {
+      background: #f0fdf4;
+      border: 1.5px solid #86efac;
+      border-radius: 10px;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .upwork-badge {
+      background: #16a34a;
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 11px;
+      padding: 8px 12px;
+      border-radius: 7px;
+      text-align: center;
+      flex-shrink: 0;
+      letter-spacing: 0.02em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- =======================================================================
+       TRANG 1: TỔNG QUAN DỰ ÁN NFF & HIỂN THỊ NGUYÊN BẢN FULL-SIZE TOÀN TRANG
+       ======================================================================= -->
+  <div class="page">
+    <div>
+      <div class="header-bar">
+        <div class="header-logo">
+          <div class="logo-badge">D</div>
+          <div>
+            <div class="logo-text">DƯƠNG // HỒ SƠ DỰ ÁN TIÊU BIỂU (CASE STUDY)</div>
+            <div class="logo-sub">Wix Studio • Cổng Dữ liệu Tài chính (Fintech) • Tối ưu Chuyển đổi (CRO)</div>
+          </div>
+        </div>
+        <div class="upwork-pill">
+          <span class="dot"></span>
+          Upwork Verified Portfolio
+        </div>
+      </div>
+
+      <!-- Project Title Banner -->
+      <div class="project-banner">
+        <div class="banner-eyebrow">Dự án Thực tế // Nền tảng Xuất bản Nghiên cứu Tài chính &amp; Vĩ mô (Fintech Research Portal)</div>
+        <h1 class="banner-title">NO FILTER FINANCE (NFF) — Cổng Báo cáo Chiến lược Thị trường &amp; Phễu Thu thập Nhà Đầu tư</h1>
+        <p class="banner-desc">
+          Thiết kế và triển khai trọn gói trên <strong>Wix Studio</strong> cho thương hiệu phân tích tài chính <em>No Filter Finance ("Data-first. Zero noise.")</em>. Kết hợp ngôn ngữ thiết kế Institutional Dark-Light hiện đại, cấu trúc Research Hub 5 phân khúc và phễu thu thập Email (Lead Gating) chuyển đổi cao.
+        </p>
+      </div>
+
+      <!-- Main 2-Column Content: Left Case Study + Right Full-Size Uncropped Screenshot -->
+      <div class="page1-grid">
+        
+        <!-- Left Column: Vietnamese Case Study Analysis -->
+        <div>
+          <div class="kpi-grid-2x2">
+            <div class="kpi-card">
+              <div class="kpi-num">Wix Studio</div>
+              <div class="kpi-label">Nền tảng Triển khai</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-num">Dual Funnel</div>
+              <div class="kpi-label">Phễu Thu thập Lead Kép</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-num">5 Phân khu</div>
+              <div class="kpi-label">Hệ sinh thái Research Hub</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-num">100% Mobile</div>
+              <div class="kpi-label">Chuẩn Hiển thị Đa thiết bị</div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-title">01. Bối cảnh &amp; Bài toán Khách hàng</div>
+            <p class="info-text">
+              Các nhà giao dịch (Traders) và nhà đầu tư hiện đại thường bị quá tải bởi các báo cáo tài chính dài hàng chục trang chứa đầy thuật ngữ hàn lâm. <strong>No Filter Finance (NFF)</strong> ra đời với sứ mệnh cô đọng dữ liệu dòng tiền tổ chức (<em>Institutional Data &amp; Options Flow</em>) thành bản tin chiến lược đọc nhanh trong 7 phút mỗi sáng.<br>
+              <strong>Thách thức:</strong> Cần xây dựng một Website &amp; Landing Page có thẩm mỹ chuẩn tổ chức tài chính quốc tế, tạo dựng niềm tin tức thì và tối đa hóa lượng người dùng đăng ký nhận bản tin miễn phí <em>"The Weekly Tactical Review"</em>.
+            </p>
+          </div>
+
+          <div class="info-card amber">
+            <div class="info-title">02. Giải pháp Thiết kế UX/UI &amp; Kiến trúc Thông tin</div>
+            <ul class="info-list">
+              <li><strong>Nhịp điệu Thị giác Tương phản (Dark &amp; Light Rhythm):</strong> Mở đầu bằng nền Dark Navy quyền lực với đồ họa 3D Gradient tạo ấn tượng công nghệ cao; chuyển tiếp mượt mà sang nền Sáng (Off-White) tại khu vực đọc thử báo cáo và điền form để tối ưu độ dễ đọc.</li>
+              <li><strong>Trực quan hóa Sản phẩm Số (Tangible Digital Preview):</strong> Thiết kế thẻ Mockup bìa báo cáo mẫu (<em>"The Index Is Stronger Than the Market"</em>) đặt ngay cạnh biểu mẫu đăng ký Email giúp người dùng hình dung rõ giá trị nhận được.</li>
+              <li><strong>Lộ trình 3 Bước Rõ ràng:</strong> Giải thích quy trình xử lý dữ liệu qua 3 bước trực quan: <code>01 We Gather the Data</code> → <code>02 We Decode It</code> → <code>03 We Deliver It to You — Fast</code>.</li>
+            </ul>
+          </div>
+
+          <div class="info-card emerald">
+            <div class="info-title">03. Cấu trúc Trung tâm Nghiên cứu (Research Hub)</div>
+            <p class="info-text">
+              Thiết kế lưới Bento Grid 5 dòng sản phẩm báo cáo chuyên biệt, gắn nhãn phân quyền rõ ràng theo gói thành viên (<em>Free, Plus, Pro Tiers</em>):<br>
+              • <strong>Daily Morning Brief:</strong> Bản tin lộ trình thị trường 7 phút trước giờ mở cửa.<br>
+              • <strong>Weekly Tactical Review:</strong> Báo cáo tổng hợp vĩ mô và dòng tiền mỗi Chủ Nhật.<br>
+              • <strong>Sectors Playbook:</strong> Theo dõi sự dịch chuyển dòng tiền giữa các nhóm ngành.<br>
+              • <strong>Equity Deep Dives &amp; Global Macro:</strong> Phân tích chuyên sâu cổ phiếu và vĩ mô toàn cầu.
+            </p>
+          </div>
+
+          <div class="info-card purple" style="margin-bottom: 0;">
+            <div class="info-title">04. Công nghệ &amp; Kỹ năng Triển khai</div>
+            <div class="tag-row" style="margin-top: 3px;">
+              <span class="code-pill">Wix Studio Custom Layout</span>
+              <span class="code-pill">Fintech Editorial UI</span>
+              <span class="code-pill">Email Lead Gating</span>
+              <span class="code-pill">Bento Grid System</span>
+              <span class="code-pill">High-CRO Copy Hierarchy</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Full-Size Entire Uncropped Image -->
+        <div class="fullsize-frame">
+          <div class="browser-bar">
+            <div class="browser-dots">
+              <span class="b-dot r"></span>
+              <span class="b-dot y"></span>
+              <span class="b-dot g"></span>
+            </div>
+            <div class="browser-label">FULL-SIZE LANDING PAGE (100%)</div>
+          </div>
+          <div class="fullsize-img-box">
+            <img src="assets/img/projects/Web_Wix_Indian_Report_Nff_11zon.webp" alt="No Filter Finance Full Size Website">
+          </div>
+          <div style="background: #1e293b; color: #cbd5e1; font-size: 7.5px; text-align: center; padding: 4px 6px; font-family: 'JetBrains Mono', monospace;">
+            Ảnh nguyên bản Full-Size từ Header đến Footer<br>(Xem chi tiết phóng lớn ở Trang 2 &amp; Trang 3)
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>HỒ SƠ DỰ ÁN: NO FILTER FINANCE (NFF) • THỰC HIỆN BỞI DƯƠNG</span>
+      <span class="footer-right">TRANG 01 / 03 // TỔNG QUAN &amp; ẢNH FULL-SIZE</span>
+    </div>
+  </div>
+
+
+  <!-- =======================================================================
+       TRANG 2: PHÓNG LỚN CHI TIẾT NỬA TRÊN GIAO DIỆN FULL-SIZE (HERO -> WHAT IS NFF)
+       ======================================================================= -->
+  <div class="page">
+    <div>
+      <div class="header-bar">
+        <div class="header-logo">
+          <div class="logo-badge">D</div>
+          <div>
+            <div class="logo-text">DƯƠNG // CHI TIẾT GIAO DIỆN NFF (PHẦN 1: HERO &amp; PHỄU LEAD MAGNET)</div>
+            <div class="logo-sub">Phóng lớn trực tiếp từ ảnh Full-Size dự án No Filter Finance</div>
+          </div>
+        </div>
+        <div class="upwork-pill">
+          <span class="dot"></span>
+          Upwork Verified Portfolio
+        </div>
+      </div>
+
+      <div class="zoom-grid">
+        <!-- Left: Large Zoomed Top Half of Full-Size Image -->
+        <div class="zoom-viewport">
+          <div class="browser-bar">
+            <div class="browser-dots">
+              <span class="b-dot r"></span>
+              <span class="b-dot y"></span>
+              <span class="b-dot g"></span>
+            </div>
+            <div class="browser-label">ZOOM CHI TIẾT PHẦN THƯỢNG TẦNG // HERO, LEAD FORM &amp; ĐỊNH VỊ NFF</div>
+          </div>
+          <div class="crop-window-top">
+            <img src="assets/img/projects/Web_Wix_Indian_Report_Nff_11zon.webp" alt="NFF Top Half Full Size Zoom">
+          </div>
+        </div>
+
+        <!-- Right: Detailed Vietnamese Breakdown -->
+        <div class="annotation-col">
+          <div>
+            <div class="step-card">
+              <span class="step-badge orange">PHÂN ĐOẠN 01 // ABOVE THE FOLD</span>
+              <h3 class="step-title">Hero Section: "Data-first. Zero noise."</h3>
+              <p class="step-desc">
+                • <strong>Tuyên ngôn Định vị Sắc bén:</strong> Đặt tiêu đề lớn tương phản trắng - cam trên nền Dark Navy cùng khối 3D phát sáng, truyền tải thông điệp cốt lõi: <em>"Bản tin thị trường thực chiến bạn có thể đọc trọn vẹn"</em>.<br>
+                • <strong>Điều hướng Kép (Dual CTA):</strong> Nút chính <em>"Start For Free"</em> (Xanh lam nổi bật) dành cho người dùng mới muốn trải nghiệm ngay, và nút phụ <em>"See Pricing"</em> dành cho khách hàng tổ chức muốn xem các gói trả phí.
+              </p>
+            </div>
+
+            <div class="step-card">
+              <span class="step-badge">PHÂN ĐOẠN 02 // LEAD MAGNET FUNNEL</span>
+              <h3 class="step-title">Phễu Thu thập Email: "The Weekly Tactical Review"</h3>
+              <p class="step-desc">
+                • <strong>Thiết kế Bố cục 2 Cột Tối ưu CRO:</strong> Cột trái là hộp biểu mẫu thu thập Email tối giản (chỉ 1 trường nhập Email + Nút <em>"Get It Free →"</em> kèm cam kết <em>"One email per week. Unsubscribe anytime"</em> giúp xóa bỏ tâm lý ngại spam).<br>
+                • <strong>Mockup Ấn phẩm Thực tế:</strong> Cột phải trưng bày thẻ giao diện báo cáo mẫu với nhãn <em>"Sample"</em> và nút <em>"View Sample →"</em>, giúp tăng mạnh tỷ lệ chuyển đổi khách truy cập thành Subscriber.
+              </p>
+            </div>
+
+            <div class="step-card">
+              <span class="step-badge purple">PHÂN ĐOẠN 03 // VALUE PROPOSITION</span>
+              <h3 class="step-title">Khối Tuyên ngôn "No spam. No hype."</h3>
+              <p class="step-desc">
+                • Điểm nghỉ thị giác (Visual Breather) sử dụng các khối hình học 3D đa sắc kết hợp thông điệp ngắn gọn: Chỉ cung cấp dữ liệu thực tế làm dịch chuyển thị trường.
+              </p>
+            </div>
+
+            <div class="step-card" style="margin-bottom: 0;">
+              <span class="step-badge emerald">PHÂN ĐOẠN 04 // FEATURE MATRIX</span>
+              <h3 class="step-title">Định vị "What is NFF?" — 4 Giá trị Cốt lõi</h3>
+              <p class="step-desc">
+                Trình bày 4 thẻ lợi ích ngang bằng hệ thống icon mảnh hiện đại:<br>
+                1. <strong>Institutional data, simplified:</strong> Dữ liệu cấp độ tổ chức được đơn giản hóa.<br>
+                2. <strong>7-minute daily read:</strong> Tối ưu thời gian đọc chỉ 7 phút mỗi ngày.<br>
+                3. <strong>Structured &amp; visual:</strong> Trình bày có cấu trúc và giàu tính trực quan.<br>
+                4. <strong>Noise-free insight:</strong> Loại bỏ hoàn toàn tin đồn và nhiễu loạn thị trường.
+              </p>
+            </div>
+          </div>
+
+          <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 9px 11px; font-size: 8.5px; color: #1e3a8a;">
+            <strong>💡 Điểm nhấn Kỹ thuật Wix Studio:</strong> Sử dụng đường cắt chéo (Angled Section Divider) giữa phần Hero nền tối và phần nội dung nền sáng để dẫn dắt ánh nhìn tự nhiên xuống phễu đăng ký.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>HỒ SƠ DỰ ÁN: NO FILTER FINANCE (NFF) • THỰC HIỆN BỞI DƯƠNG</span>
+      <span class="footer-right">TRANG 02 / 03 // BÓC TÁCH GIAO DIỆN (PHẦN TRÊN)</span>
+    </div>
+  </div>
+
+
+  <!-- =======================================================================
+       TRANG 3: PHÓNG LỚN CHI TIẾT NỬA DƯỚI GIAO DIỆN FULL-SIZE (ROADMAP -> FOOTER)
+       ======================================================================= -->
+  <div class="page">
+    <div>
+      <div class="header-bar">
+        <div class="header-logo">
+          <div class="logo-badge">D</div>
+          <div>
+            <div class="logo-text">DƯƠNG // CHI TIẾT GIAO DIỆN NFF (PHẦN 2: ROADMAP &amp; RESEARCH HUB)</div>
+            <div class="logo-sub">Phóng lớn trực tiếp từ ảnh Full-Size dự án No Filter Finance</div>
+          </div>
+        </div>
+        <div class="upwork-pill">
+          <span class="dot"></span>
+          Upwork Verified Portfolio
+        </div>
+      </div>
+
+      <div class="zoom-grid">
+        <!-- Left: Large Zoomed Bottom Half of Full-Size Image -->
+        <div class="zoom-viewport">
+          <div class="browser-bar">
+            <div class="browser-dots">
+              <span class="b-dot r"></span>
+              <span class="b-dot y"></span>
+              <span class="b-dot g"></span>
+            </div>
+            <div class="browser-label">ZOOM CHI TIẾT PHẦN HẠ TẦNG // 7-MIN ROADMAP, RESEARCH HUB &amp; FOOTER</div>
+          </div>
+          <div class="crop-window-bottom">
+            <img src="assets/img/projects/Web_Wix_Indian_Report_Nff_11zon.webp" alt="NFF Bottom Half Full Size Zoom">
+          </div>
+        </div>
+
+        <!-- Right: Detailed Vietnamese Breakdown -->
+        <div class="annotation-col">
+          <div>
+            <div class="step-card">
+              <span class="step-badge orange">PHÂN ĐOẠN 05 // PROCESS WORKFLOW</span>
+              <h3 class="step-title">Lộ trình "Your pre-market roadmap in 7 minutes"</h3>
+              <p class="step-desc">
+                • <strong>Cấu trúc 3 Bước Đánh số Lớn (01 – 02 – 03):</strong> Đặt trên nền Dark Slate giúp giải thích rõ quy trình tạo ra giá trị của đội ngũ phân tích:<br>
+                — <code>01 We Gather the Data</code> (Thu thập dữ liệu dòng tiền quyền chọn, định vị Dealer &amp; vĩ mô).<br>
+                — <code>02 We Decode It</code> (Giải mã dữ liệu thô thành nhận định rõ ràng, không đầu cơ cảm tính).<br>
+                — <code>03 We Deliver It to You — Fast</code> (Gửi trực tiếp trước giờ mở cửa phiên giao dịch).
+              </p>
+            </div>
+
+            <div class="step-card">
+              <span class="step-badge">PHÂN ĐOẠN 06 // SECONDARY CONVERSION</span>
+              <h3 class="step-title">Điểm chạm Chuyển đổi Thứ 2: "You Use It to Frame Your Day"</h3>
+              <p class="step-desc">
+                • Bố trí khung đăng ký nhận báo cáo lần thứ hai với hiệu ứng đổ bóng nổi (Glassmorphism / Soft Shadow Card) ngay sau khi người đọc đã hiểu rõ quy trình 3 bước, giúp đón đầu nhóm khách hàng cần đọc kỹ mới ra quyết định.
+              </p>
+            </div>
+
+            <div class="step-card">
+              <span class="step-badge emerald">PHÂN ĐOẠN 07 // PRODUCT ECOSYSTEM</span>
+              <h3 class="step-title">Hệ sinh thái "Access Our Research Hub" (Bento 5 Thẻ)</h3>
+              <p class="step-desc">
+                • Trình bày 5 danh mục ấn phẩm nghiên cứu (<em>Daily Morning Brief, Weekly Tactical Review, Sectors Playbook, Equity Deep Dives, Global Macro</em>) với điểm nhấn góc màu Gradient Cam &amp; Xanh dương nhận diện từng cấp độ tài khoản (<em>Free, Plus, Pro</em>).
+              </p>
+            </div>
+
+            <div class="step-card" style="margin-bottom: 0;">
+              <span class="step-badge purple">PHÂN ĐOẠN 08 // CLOSING CTA &amp; FOOTER</span>
+              <h3 class="step-title">Banner Khóa Chốt "Get tomorrow's edge today"</h3>
+              <p class="step-desc">
+                • Hộp CTA Gradient xanh dương nổi bật dẫn người dùng sang trang bảng giá (<em>See Pricing</em>), kết thúc bằng Footer phân cột rõ ràng (Pages, Reports, Legal, Social Media).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Upwork Policy Compliant Box -->
+      <div class="upwork-box">
+        <div class="upwork-badge">
+          UPWORK<br>VERIFIED
+        </div>
+        <div style="font-size: 8.6px; color: #14532d; line-height: 1.45;">
+          <strong style="font-size: 10px; color: #052e16; display: block; margin-bottom: 2px;">
+            Sẵn sàng Thiết kế &amp; Phát triển Website Wix Studio, Fintech Portal &amp; High-CRO Landing Page trên Upwork
+          </strong>
+          Hồ sơ dự án thu nhỏ này tuân thủ 100% Chính sách của Upwork (Upwork Terms of Service — Tuyệt đối không chứa thông tin liên lạc cá nhân ngoài nền tảng). Hãy nhắn tin trực tiếp qua <strong>Upwork Messages</strong> hoặc gửi lời mời phỏng vấn (<em>Invite to Job</em>) để trao đổi chi tiết về dự án của bạn!
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>HỒ SƠ DỰ ÁN: NO FILTER FINANCE (NFF) • THỰC HIỆN BỞI DƯƠNG</span>
+      <span class="footer-right">TRANG 03 / 03 // BÓC TÁCH GIAO DIỆN (PHẦN DƯỚI) &amp; HỢP TÁC</span>
+    </div>
+  </div>
+
+</body>
+</html>
