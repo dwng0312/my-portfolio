@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Duong | Freelance Web, SEO & AI Automation Portfolio - Upwork Edition</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap');
+
+    @page {
+      size: A4 portrait;
+      margin: 10mm 12mm 12mm 12mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: #0f172a;
+      background: #ffffff;
+      margin: 0;
+      padding: 0;
+      font-size: 11pt;
+      line-height: 1.5;
+    }
+
+    /* Page container */
+    .page {
+      width: 100%;
+      min-height: 275mm;
+      max-height: 275mm;
+      page-break-after: always;
+      break-after: page;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-bottom: 8mm;
+      overflow: hidden;
+    }
+
+    .page:last-child {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    /* Header bar on each page */
+    .header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid #e2e8f0;
+      margin-bottom: 16px;
+    }
+
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-badge {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: #2563eb;
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-text {
+      font-weight: 800;
+      font-size: 15px;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+    }
+
+    .logo-sub {
+      font-size: 9px;
+      font-family: 'JetBrains Mono', monospace;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .upwork-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      color: #15803d;
+      font-size: 9.5px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .upwork-pill .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #16a34a;
+    }
+
+    /* Footer on each page */
+    .footer-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 8px;
+      border-top: 1px solid #e2e8f0;
+      font-size: 8.5px;
+      color: #64748b;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .footer-right {
+      color: #2563eb;
+      font-weight: 600;
+    }
+
+    /* Typography & Utilities */
+    h1, h2, h3, h4, p {
+      margin: 0;
+    }
+
+    .section-eyebrow {
+      font-size: 9px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      color: #2563eb;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
+    }
+
+    .section-title {
+      font-size: 19px;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.03em;
+      margin-bottom: 6px;
+    }
+
+    .section-desc {
+      font-size: 10.5px;
+      color: #475569;
+      line-height: 1.5;
+      margin-bottom: 14px;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 12px 14px;
+    }
+
+    .card-gray {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 12px 14px;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 8.5px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #dbeafe;
+      padding: 2px 7px;
+      border-radius: 5px;
+    }
+
+    .tag-emerald {
+      background: #ecfdf5;
+      color: #047857;
+      border: 1px solid #a7f3d0;
+    }
+
+    .tag-purple {
+      background: #faf5ff;
+      color: #7e22ce;
+      border: 1px solid #e9d5ff;
+    }
+
+    .tag-amber {
+      background: #fffbeb;
+      color: #b45309;
+      border: 1px solid #fde68a;
+    }
+
+    /* Page 1 Specific */
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .hero-bio {
+      font-size: 11pt;
+      line-height: 1.6;
+      color: #334155;
+    }
+
+    .hero-bio strong {
+      color: #0f172a;
+    }
+
+    .profile-card {
+      background: #ffffff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 14px;
+      text-align: center;
+    }
+
+    .profile-img-wrap {
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 10px auto;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid #2563eb;
+      box-shadow: 0 4px 12px rgba(37,99,235,0.15);
+    }
+
+    .profile-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+
+    .kpi-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin: 14px 0;
+    }
+
+    .kpi-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 10px 8px;
+      text-align: center;
+    }
+
+    .kpi-val {
+      font-size: 18px;
+      font-weight: 800;
+      color: #2563eb;
+      line-height: 1.1;
+      margin-bottom: 2px;
+    }
+
+    .kpi-lbl {
+      font-size: 8.5px;
+      font-weight: 700;
+      color: #475569;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* Pillars Grid */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .pillar-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 9px;
+      padding: 12px 14px;
+      border-left: 3.5px solid #2563eb;
+    }
+
+    .pillar-card:nth-child(2) { border-left-color: #059669; }
+    .pillar-card:nth-child(3) { border-left-color: #7c3aed; }
+    .pillar-card:nth-child(4) { border-left-color: #e11d48; }
+
+    .pillar-title {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 3px 0 5px 0;
+    }
+
+    .pillar-desc {
+      font-size: 9.5px;
+      color: #475569;
+      line-height: 1.45;
+      margin-bottom: 6px;
+    }
+
+    .pillar-list {
+      margin: 0;
+      padding-left: 14px;
+      font-size: 9px;
+      color: #334155;
+      line-height: 1.45;
+    }
+
+    /* Case Studies Layout */
+    .case-box {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 12px;
+    }
+
+    .case-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+
+    .case-title {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.02em;
+    }
+
+    .case-split {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .challenge-box {
+      background: #f8fafc;
+      border-left: 3px solid #2563eb;
+      padding: 6px 10px;
+      font-size: 9.5px;
+      color: #334155;
+      margin-bottom: 6px;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
+
+    .metric-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      padding: 6px 10px;
+      border-radius: 7px;
+    }
+
+    .metric-num {
+      font-weight: 800;
+      font-size: 14px;
+      color: #2563eb;
+      min-width: 44px;
+      text-align: center;
+    }
+
+    .metric-txt {
+      font-size: 8.5px;
+      line-height: 1.3;
+      color: #1e293b;
+    }
+
+    .metric-txt strong {
+      display: block;
+      color: #0f172a;
+    }
+
+    /* Gallery Grid */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 11px;
+    }
+
+    .gallery-item {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .gallery-thumb {
+      height: 110px;
+      background: #f1f5f9;
+      overflow: hidden;
+      border-bottom: 1px solid #e2e8f0;
+      position: relative;
+    }
+
+    .gallery-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+
+    .gallery-content {
+      padding: 8px 10px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .gallery-title {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 3px;
+      line-height: 1.3;
+    }
+
+    .gallery-desc {
+      font-size: 8.5px;
+      color: #64748b;
+      line-height: 1.35;
+      margin-bottom: 6px;
+    }
+
+    /* Upwork Policy Notice Box */
+    .upwork-policy-box {
+      background: #f8fafc;
+      border: 1.5px dashed #94a3b8;
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-top: 14px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .upwork-badge-large {
+      background: #14a800;
+      color: white;
+      font-weight: 800;
+      font-size: 16px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      letter-spacing: -0.02em;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .policy-text h4 {
+      font-size: 13px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 3px;
+    }
+
+    .policy-text p {
+      font-size: 9.5px;
+      color: #475569;
+      line-height: 1.45;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- =======================================================================
+       PAGE 1: COVER & EXECUTIVE OVERVIEW
+       ======================================================================= -->
+  <div class="page">
+    <div>
+      <div class="header-bar">
+        <div class="header-logo">
+          <div class="logo-badge">D</div>
+          <div>
+            <div class="logo-text">DUONG</div>
+            <div class="logo-sub">Freelance Web Specialist • Technical SEO • AI Automation</div>
+          </div>
+        </div>
+        <div class="upwork-pill">
+          <span class="dot"></span>
+          Upwork Verified Talent
+        </div>
+      </div>
+
+      <div class="hero-grid">
+        <div>
+          <div class="section-eyebrow">Executive Portfolio // Upwork Exclusive</div>
+          <h1 class="section-title" style="font-size: 22px; line-height: 1.25; margin-bottom: 10px;">
+            High-Performance Web Development, <br>
+            <span style="color: #2563eb;">Technical SEO &amp; AI Marketing Automation.</span>
+          </h1>
+          <p class="hero-bio">
+            Hello! I am <strong>Duong</strong>, an independent freelance developer and search growth specialist on Upwork. I build high-converting websites on <strong>Shopify Liquid, WordPress, and Wix Studio</strong>, optimize technical search architectures for <strong>Google Top 1 rankings</strong>, and eliminate manual marketing bottlenecks with <strong>AI workflows &amp; event tracking pipelines</strong>.
+          </p>
+
+          <div style="margin-top: 14px; display: flex; flex-wrap: wrap; gap: 6px;">
+            <span class="tag">Shopify Liquid</span>
+            <span class="tag">WordPress Child Themes</span>
+            <span class="tag">Wix Studio</span>
+            <span class="tag tag-emerald">Technical SEO Audit</span>
+            <span class="tag tag-emerald">Schema.org JSON-LD</span>
+            <span class="tag tag-purple">Make &amp; Zapier AI</span>
+            <span class="tag tag-purple">Google Tag Manager</span>
+            <span class="tag tag-amber">Direct Response CRO</span>
+          </div>
+        </div>
+
+        <div class="profile-card">
+          <div class="profile-img-wrap">
+            <img src="assets/img/avt.png" alt="Duong Profile">
+          </div>
+          <h2 style="font-size: 16px; font-weight: 800; color: #0f172a; margin-bottom: 2px;">Duong</h2>
+          <p style="font-size: 10px; font-weight: 700; color: #2563eb; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">
+            Web Specialist &amp; Growth Engineer
+          </p>
+          <div style="font-size: 9px; color: #64748b; margin-bottom: 10px;">
+            Available for Fixed-Price &amp; Hourly Contracts on Upwork
+          </div>
+          <div style="border-top: 1px solid #f1f5f9; padding-top: 8px; font-size: 9px; text-align: left; line-height: 1.6;">
+            <div><strong>Language:</strong> English (B2 Professional) • Vietnamese (Native)</div>
+            <div><strong>Time Zone:</strong> Flexible overlap for US, EU &amp; APAC clients</div>
+            <div><strong>Terms:</strong> 100% Upwork Compliant (No outside contacts)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="kpi-row">
+        <div class="kpi-box">
+          <div class="kpi-val">#1 Rank</div>
+          <div class="kpi-lbl">Google Brand Top 1</div>
+        </div>
+        <div class="kpi-box">
+          <div class="kpi-val">+56%</div>
+          <div class="kpi-lbl">Organic Traffic Surge</div>
+        </div>
+        <div class="kpi-box">
+          <div class="kpi-val">100%</div>
+          <div class="kpi-lbl">Valid Schema Markup</div>
+        </div>
+        <div class="kpi-box">
+          <div class="kpi-val">-40%</div>
+          <div class="kpi-lbl">DOM Loading Friction</div>
+        </div>
+      </div>
+
+      <div class="card-gray" style="margin-top: 10px;">
+        <div class="section-eyebrow" style="margin-bottom: 2px;">Why Work With Me on Upwork</div>
+        <div style="font-size: 9.5px; color: #334155; line-height: 1.55;">
+          • <strong>Full-Stack Freelance Delivery:</strong> Seamless bridge between responsive frontend UI, Google crawler optimization, and backend webhook automations.<br>
+          • <strong>Data-Driven &amp; Documented:</strong> Screaming Frog crawls, Google Search Console disavow records, and GTM event deduplication with zero guesswork.<br>
+          • <strong>Fast, Transparent Communication:</strong> Daily milestones, clear async video/loom updates, and full compliance with Upwork Terms of Service.
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>UPWORK PORTFOLIO • DUONG</span>
+      <span class="footer-right">PAGE 01 // OVERVIEW</span>
+    </div>
+  </div>
+
+
+  <!-- =======================================================================
+       PAGE 2: FOUR CORE SERVICE PILLARS & METHODOLOGY
+       ======================================================================= -->
+  <div class="page">
+    <div>
+      <div class="header-bar">
+        <div class="header-logo">
+          <div class="logo-badge">D</div>
+          <div>
+            <div class="logo-text">DUONG // CORE CAPABILITIES</div>
+            <div class="logo-sub">Engineered Freelance Competencies</div>
+          </div>
+        </div>
+        <div class="upwork-pill">
+          <span class="dot"></span>
+          Upwork Verified
+        </div>
+      </div>
+
+      <div class="section-eyebrow">02 // Core Competencies</div>
+      <h2 class="section-title">Four Pillars of Freelance Delivery</h2>
+      <p class="section-desc">
+        End-to-end execution covering design systems, high-speed code, search crawlability, and automated data pipelines.
+      </p>
+
+      <div class="pillars-grid">
+
+        <!-- Pillar 1 -->
+        <div class="pillar-card">
+          <span class="tag">Pillar 01</span>
+          <h3 class="pillar-title">E-Commerce &amp; Web Development</h3>
+          <p class="pillar-desc">
+            Custom development on Shopify Liquid, WordPress, and Wix Studio. Optimized for fast mobile loading, sub-second LCP, and friction-free checkout flows.
+          </p>
+          <ul class="pillar-list">
+            <li>Shopify Theme Liquid customization, collection filtering, and checkout CRO.</li>
+            <li>WordPress lightweight child themes, Gutenberg &amp; Elementor builds.</li>
+            <li>Wix Studio interactive service portals, booking funnels, and responsive UI.</li>
+            <li>HTML5/CSS3/JS modular code with minimal third-party script bloat.</li>
+          </ul>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="pillar-card">
+          <span class="tag tag-emerald">Pillar 02</span>
+          <h3 class="pillar-title">Technical &amp; Semantic SEO</h3>
+          <p class="pillar-desc">
+            Auditing search architecture to ensure Google spiders crawl, understand, and rank your commercial pages without wasted crawl budget.
+          </p>
+          <ul class="pillar-list">
+            <li>Crawl health triage, resolving 4xx/5xx errors, robots.txt, and dynamic XML sitemaps.</li>
+            <li>Schema.org JSON-LD structured data (LocalBusiness, Product, FAQPage, Organization).</li>
+            <li>Entity-based keyword research, topic clustering, and internal link graph design.</li>
+            <li>Toxic backlink audits &amp; Google Search Console disavow workflows.</li>
+          </ul>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="pillar-card">
+          <span class="tag tag-purple">Pillar 03</span>
+          <h3 class="pillar-title">AI Marketing Automation &amp; Data Tracking</h3>
+          <p class="pillar-desc">
+            Eliminating manual data entry and ensuring 100% reliable conversion attribution across ad platforms and CRMs.
+          </p>
+          <ul class="pillar-list">
+            <li>Workflow automation connecting lead forms to CRMs via Make, Zapier &amp; Webhooks.</li>
+            <li>Google Tag Manager custom JS triggers and transaction token deduplication.</li>
+            <li>Google Analytics 4 custom event funnels and conversion goal tracking.</li>
+            <li>Meta Pixel &amp; TikTok Pixel server-side CAPI synchronization.</li>
+          </ul>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="pillar-card">
+          <span class="tag tag-amber">Pillar 04</span>
+          <h3 class="pillar-title">Social Commerce &amp; Multichannel Ops</h3>
+          <p class="pillar-desc">
+            Managing omnichannel retail operations spanning official web storefronts and high-growth social commerce marketplaces.
+          </p>
+          <ul class="pillar-list">
+            <li>TikTok Shop &amp; Shopee store setup, listing SEO, and automated order dispatch.</li>
+            <li>Organic content planning, short-form video scripts, and Canva graphic design.</li>
+            <li>Repurposing top-performing SEO content into viral bite-sized social assets.</li>
+            <li>Catalog inventory sync across platforms to eliminate stockout issues.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Technical Skill Toolchain -->
+      <div class="card-gray" style="margin-top: 14px;">
+        <div class="section-eyebrow">Production Tech Stack &amp; Tools</div>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 6px; font-size: 9px;">
+          <div>
+            <strong style="display:block; color:#0f172a; margin-bottom:2px;">CMS &amp; Web:</strong>
+            Shopify Liquid, WordPress, Wix Studio, Tailwind CSS, HTML5, JavaScript
+          </div>
+          <div>
+            <strong style="display:block; color:#0f172a; margin-bottom:2px;">Technical SEO:</strong>
+            Screaming Frog, Google Search Console, Ahrefs, Semrush, Schema JSON-LD
+          </div>
+          <div>
+            <strong style="display:block; color:#0f172a; margin-bottom:2px;">Automation:</strong>
+            Make.com, Zapier, Google Tag Manager (GTM), GA4, Webhooks, REST APIs
+          </div>
+          <div>
+            <strong style="display:block; color:#0f172a; margin-bottom:2px;">Design &amp; Media:</strong>
+            Canva Pro, Figma (Dev Mode), CUSC Graphic Design Certified, CapCut
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>UPWORK PORTFOLIO • DUONG</span>
+      <span class="footer-right">PAGE 02 // CAPABILITIES</span>
+    </div>
+  </div>
+
+
+  <!-- =======================================================================
+       PAGE 3: FLAGSHIP CASE STUDIES
+       ======================================================================= -->
+  <div class="page">
+    <div>
+      <div class="header-bar">
+        <div class="header-logo">
+          <div class="logo-badge">D</div>
+          <div>
+            <div class="logo-text">DUONG // CASE STUDIES</div>
+            <div class="logo-sub">Verified Client Results &amp; Architecture</div>
+          </div>
+        </div>
+        <div class="upwork-pill">
+          <span class="dot"></span>
+          Upwork Verified
+        </div>
+      </div>
+
+      <div class="section-eyebrow">03 // Flagship Case Studies</div>
+      <h2 class="section-title">Measurable Results Across Real Client Platforms</h2>
+      <p class="section-desc">
+        How complex technical challenges were diagnosed, executed, and validated with measurable commercial impact.
+      </p>
+
+      <!-- Case 1: German Butler -->
+      <div class="case-box">
+        <div class="case-header">
+          <div>
+            <span class="tag">B2B International Service</span>
+            <span class="case-title" style="margin-left: 6px;">German Butler &amp; Relocation: Mobile-First Theme &amp; Entity Schema</span>
+          </div>
+          <span style="font-size: 8.5px; font-family: 'JetBrains Mono'; color: #64748b;">Berlin &amp; Brandenburg</span>
+        </div>
+        <div class="case-split">
+          <div>
+            <div class="challenge-box">
+              <strong>Challenge:</strong> German relocation enterprise required clear search entity recognition in Google Maps and fast mobile load times across Berlin districts with minimal DOM baggage.
+            </div>
+            <div style="font-size: 9px; color: #334155; line-height: 1.45;">
+              <strong>Execution:</strong> Built a lightweight, mobile-first WordPress child theme stripping unnecessary external libraries. Engineered nested <code style="font-family: 'JetBrains Mono';">MovingCompany</code> and <code style="font-family: 'JetBrains Mono';">LocalBusiness</code> JSON-LD schemas linking service areas, operating hours, and geo-coordinates. Integrated instant quote calculator.
+            </div>
+          </div>
+          <div class="metrics-grid">
+            <div class="metric-badge">
+              <div class="metric-num">100%</div>
+              <div class="metric-txt"><strong>Clean Rich Results</strong>Zero syntax errors on Google Testing Tool</div>
+            </div>
+            <div class="metric-badge">
+              <div class="metric-num">-40%</div>
+              <div class="metric-txt"><strong>DOM Load Friction</strong>Stripped heavy scripts for sub-second LCP</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case 2: Carnival Vietnam -->
+      <div class="case-box">
+        <div class="case-header">
+          <div>
+            <span class="tag tag-amber">E-Commerce Technical SEO</span>
+            <span class="case-title" style="margin-left: 6px;">Carnival Timepieces: Technical SEO &amp; Brand Top 1 Restoration</span>
+          </div>
+          <span style="font-size: 8.5px; font-family: 'JetBrains Mono'; color: #64748b;">Shopify &amp; Search Console</span>
+        </div>
+        <div class="case-split">
+          <div>
+            <div class="challenge-box" style="border-left-color: #f59e0b;">
+              <strong>Challenge:</strong> Platform suffered from crawl inefficiency and indexation bloat caused by faceted search parameters, legacy toxic backlink spam, and missing rich sitelinks.
+            </div>
+            <div style="font-size: 9px; color: #334155; line-height: 1.45;">
+              <strong>Execution:</strong> Conducted comprehensive audit with Screaming Frog. Executed disavow workflows in Google Search Console, cleaned faceted parameter URLs, and mapped nested <code style="font-family: 'JetBrains Mono';">Product</code> &amp; <code style="font-family: 'JetBrains Mono';">BreadcrumbList</code> schemas.
+            </div>
+          </div>
+          <div class="metrics-grid">
+            <div class="metric-badge">
+              <div class="metric-num" style="color: #b45309;">#1</div>
+              <div class="metric-txt"><strong>Top 1 Google Rank</strong>For brand keywords with rich sitelinks</div>
+            </div>
+            <div class="metric-badge">
+              <div class="metric-num" style="color: #b45309;">5.3%</div>
+              <div class="metric-txt"><strong>Average Organic CTR</strong>Achieved within first 1.5 months</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case 3: Jobsnew -->
+      <div class="case-box" style="margin-bottom: 0;">
+        <div class="case-header">
+          <div>
+            <span class="tag tag-emerald">Content SEO &amp; Growth</span>
+            <span class="case-title" style="margin-left: 6px;">Jobsnew Platform: Semantic SEO Content Silos &amp; Traffic Surge</span>
+          </div>
+          <span style="font-size: 8.5px; font-family: 'JetBrains Mono'; color: #64748b;">Organic Growth</span>
+        </div>
+        <div class="case-split">
+          <div>
+            <div class="challenge-box" style="border-left-color: #059669;">
+              <strong>Challenge:</strong> Capturing high-intent organic search volume in a fiercely competitive employment and career advisory vertical without relying on paid advertising.
+            </div>
+            <div style="font-size: 9px; color: #334155; line-height: 1.45;">
+              <strong>Execution:</strong> Designed semantic content silos around high-volume career queries. Researched, produced, and published <strong>207 semantic SEO articles</strong>. Structured an internal link graph channeling link equity toward core conversion pages.
+            </div>
+          </div>
+          <div class="metrics-grid">
+            <div class="metric-badge">
+              <div class="metric-num" style="color: #059669;">+56%</div>
+              <div class="metric-txt"><strong>Traffic Surge</strong>From 12.3k to 19.2k monthly organic visits</div>
+            </div>
+            <div class="metric-badge">
+              <div class="metric-num" style="color: #059669;">207</div>
+              <div class="metric-txt"><strong>Targeted Articles</strong>&gt;50% ranked in Google Top 1, Top 3 &amp; Top 10</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>UPWORK PORTFOLIO • DUONG</span>
+      <span class="footer-right">PAGE 03 // CASE STUDIES</span>
+    </div>
+  </div>
+
+
+  <!-- =======================================================================
+       PAGE 4: SUPPLEMENTARY CASES & REAL WORK EXPERIENCES
+       ======================================================================= -->
+  <div class="page">
+    <div>
+      <div class="header-bar">
+        <div class="header-logo">
+          <div class="logo-badge">D</div>
+          <div>
+            <div class="logo-text">DUONG // CLIENT WORKS</div>
+            <div class="logo-sub">Multi-Industry Project Execution</div>
+          </div>
+        </div>
+        <div class="upwork-pill">
+          <span class="dot"></span>
+          Upwork Verified
+        </div>
+      </div>
+
+      <div class="section-eyebrow">04 // Additional Experience</div>
+      <h2 class="section-title">Diverse Industry Deployments</h2>
+      <p class="section-desc">
+        Specialized contract work covering Shopify Liquid theme tuning, agency technical audits, and social retail channels.
+      </p>
+
+      <div style="display: grid; grid-template-columns: 1fr; gap: 11px;">
+
+        <!-- Supplementary Case 1 -->
+        <div class="card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <div style="display: flex; align-items: center; gap: 6px;">
+              <span class="tag">Shopify Liquid</span>
+              <strong style="font-size: 12px; color: #0f172a;">Freelance Shopify Themes, App Audits &amp; Checkout Optimization</strong>
+            </div>
+            <span class="tag tag-emerald">Active Delivery</span>
+          </div>
+          <p style="font-size: 9px; color: #475569; line-height: 1.45; margin-bottom: 6px;">
+            Developing custom, responsive Shopify Liquid theme sections, configuring multi-currency checkout funnels, auditing third-party app scripts (reviews, upsells, inventory sync) to prevent DOM blockage, and resolving Liquid syntax deprecations for international brands.
+          </p>
+          <div style="font-size: 8.5px; color: #1e293b; background: #f8fafc; padding: 4px 8px; border-radius: 5px;">
+            <strong>Deliverables:</strong> Liquid Section Architecture • Checkout CRO • 3rd-Party Script Audit • JSON-LD Product Schema
+          </div>
+        </div>
+
+        <!-- Supplementary Case 2 -->
+        <div class="card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <div style="display: flex; align-items: center; gap: 6px;">
+              <span class="tag tag-emerald">Technical SEO</span>
+              <strong style="font-size: 12px; color: #0f172a;">Yatame Digital Agency: Technical SEO Audits &amp; Crawl Budget Triage</strong>
+            </div>
+            <span class="tag">Agency Work</span>
+          </div>
+          <p style="font-size: 9px; color: #475569; line-height: 1.45; margin-bottom: 6px;">
+            Conducted full-site technical health diagnostics for client websites. Cleaned legacy URL redirect chains, resolved 4xx/5xx server response errors, configured optimal robots.txt instructions, and deployed dynamic XML sitemaps to maximize search crawl efficiency.
+          </p>
+          <div style="font-size: 8.5px; color: #1e293b; background: #f8fafc; padding: 4px 8px; border-radius: 5px;">
+            <strong>Deliverables:</strong> Screaming Frog Crawl Logs • 301 Redirect Mapping • Canonical URL Hygiene • Site Speed Optimization
+          </div>
+        </div>
+
+        <!-- Supplementary Case 3 -->
+        <div class="card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <div style="display: flex; align-items: center; gap: 6px;">
+              <span class="tag tag-purple">Omnichannel Ops</span>
+              <strong style="font-size: 12px; color: #0f172a;">Khăn Giấy Mariel: Social Commerce &amp; Marketplace Dispatch Pipelines</strong>
+            </div>
+            <span class="tag">Retail Operations</span>
+          </div>
+          <p style="font-size: 9px; color: #475569; line-height: 1.45; margin-bottom: 6px;">
+            Managed multi-channel retail operations connecting TikTok Shop and Shopee Mall. Produced organic short-form product video scripts and Canva graphics, optimized product search listings, and ensured timely automated order dispatch.
+          </p>
+          <div style="font-size: 8.5px; color: #1e293b; background: #f8fafc; padding: 4px 8px; border-radius: 5px;">
+            <strong>Deliverables:</strong> TikTok Shop &amp; Shopee Operations • Product SEO Listings • Short-Form Video Assets • Inventory Coordination
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Upwork Project Execution Standards -->
+      <div class="card-gray" style="margin-top: 14px;">
+        <div class="section-eyebrow">Freelance Contract Workflow</div>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 6px; font-size: 8.5px; text-align: center;">
+          <div style="background: white; padding: 8px; border-radius: 6px; border: 1px solid #e2e8f0;">
+            <strong style="color: #2563eb; display: block; margin-bottom: 2px;">1. Discovery &amp; Audit</strong>
+            Review codebase, crawl site, identify friction &amp; bottlenecks.
+          </div>
+          <div style="background: white; padding: 8px; border-radius: 6px; border: 1px solid #e2e8f0;">
+            <strong style="color: #059669; display: block; margin-bottom: 2px;">2. Proposal &amp; Milestone</strong>
+            Scope definition, estimated delivery, and Upwork Escrow setup.
+          </div>
+          <div style="background: white; padding: 8px; border-radius: 6px; border: 1px solid #e2e8f0;">
+            <strong style="color: #7c3aed; display: block; margin-bottom: 2px;">3. Agile Build &amp; QA</strong>
+            Staging preview, mobile responsiveness, and schema validation.
+          </div>
+          <div style="background: white; padding: 8px; border-radius: 6px; border: 1px solid #e2e8f0;">
+            <strong style="color: #e11d48; display: block; margin-bottom: 2px;">4. Launch &amp; Support</strong>
+            Production deployment, documentation, and handover support.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>UPWORK PORTFOLIO • DUONG</span>
+      <span class="footer-right">PAGE 04 // EXPERIENCE</span>
+    </div>
+  </div>
+
+
+  <!-- =======================================================================
+       PAGE 5: WEBSITE & LANDING PAGE SHOWCASE GALLERY
+       ======================================================================= -->
+  <div class="page">
+    <div>
+      <div class="header-bar">
+        <div class="header-logo">
+          <div class="logo-badge">D</div>
+          <div>
+            <div class="logo-text">DUONG // VISUAL SHOWCASE</div>
+            <div class="logo-sub">Live Client Websites &amp; Landing Pages</div>
+          </div>
+        </div>
+        <div class="upwork-pill">
+          <span class="dot"></span>
+          Upwork Verified
+        </div>
+      </div>
+
+      <div class="section-eyebrow">05 // Project Gallery</div>
+      <h2 class="section-title">Visual Showcase of Deployed Websites</h2>
+      <p class="section-desc">
+        A selection of real-world responsive portals, e-commerce storefronts, and direct-response landing pages.
+      </p>
+
+      <div class="gallery-grid">
+
+        <!-- 1: German Butler -->
+        <div class="gallery-item">
+          <div class="gallery-thumb">
+            <img src="assets/img/projects/Web_WP_Germany_Butler_11zon.webp" alt="German Butler Web">
+          </div>
+          <div class="gallery-content">
+            <div class="gallery-title">German Butler Relocation</div>
+            <div class="gallery-desc">WordPress child theme with nested MovingCompany schema and quote calculator.</div>
+            <span class="tag">WordPress • Schema</span>
+          </div>
+        </div>
+
+        <!-- 2: Healthcare LP -->
+        <div class="gallery-item">
+          <div class="gallery-thumb">
+            <img src="assets/img/projects/LP_Ykhoa_11zon.webp" alt="Healthcare Landing Page">
+          </div>
+          <div class="gallery-content">
+            <div class="gallery-title">Medical &amp; Clinic Landing Page</div>
+            <div class="gallery-desc">High-CRO patient consultation funnel with doctor trust badges and 2-step booking.</div>
+            <span class="tag tag-emerald">High-CRO • Funnel</span>
+          </div>
+        </div>
+
+        <!-- 3: Fixhub Doors -->
+        <div class="gallery-item">
+          <div class="gallery-thumb">
+            <img src="assets/img/projects/Web_Wix_Doors_Fixhub_11zon.webp" alt="Fixhub Doors Web">
+          </div>
+          <div class="gallery-content">
+            <div class="gallery-title">Fixhub Architectural Doors</div>
+            <div class="gallery-desc">Wix Studio service platform with catalog filters and online quote requests.</div>
+            <span class="tag tag-purple">Wix Studio</span>
+          </div>
+        </div>
+
+        <!-- 4: Newlife Education -->
+        <div class="gallery-item">
+          <div class="gallery-thumb">
+            <img src="assets/img/projects/Web_WP_duhocNewlife_11zon.webp" alt="Newlife Education Portal">
+          </div>
+          <div class="gallery-content">
+            <div class="gallery-title">Newlife Study Abroad Portal</div>
+            <div class="gallery-desc">Multi-country education portal with semantic content silos and visa guides.</div>
+            <span class="tag">WordPress • Silos</span>
+          </div>
+        </div>
+
+        <!-- 5: Media PR Agency -->
+        <div class="gallery-item">
+          <div class="gallery-thumb">
+            <img src="assets/img/projects/LP_Wix_Baochi_11zon.webp" alt="PR Agency Landing Page">
+          </div>
+          <div class="gallery-content">
+            <div class="gallery-title">Digital PR &amp; Media Landing Page</div>
+            <div class="gallery-desc">High-authority agency page with publisher tiers and client intake briefing form.</div>
+            <span class="tag tag-purple">Wix Studio • B2B</span>
+          </div>
+        </div>
+
+        <!-- 6: Vietdeli Restaurant -->
+        <div class="gallery-item">
+          <div class="gallery-thumb">
+            <img src="assets/img/projects/Web_Wix_Res_Vietdeli_11zon.webp" alt="Vietdeli Restaurant Web">
+          </div>
+          <div class="gallery-content">
+            <div class="gallery-title">Vietdeli Gourmet Restaurant</div>
+            <div class="gallery-desc">Visual-first hospitality website with digital menus and table reservations.</div>
+            <span class="tag tag-amber">Hospitality • Menu</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>UPWORK PORTFOLIO • DUONG</span>
+      <span class="footer-right">PAGE 05 // SHOWCASE GALLERY</span>
+    </div>
+  </div>
+
+
+  <!-- =======================================================================
+       PAGE 6: UPWORK COMPLIANCE, TERMS & CONTRACT INITIATION
+       ======================================================================= -->
+  <div class="page">
+    <div>
+      <div class="header-bar">
+        <div class="header-logo">
+          <div class="logo-badge">D</div>
+          <div>
+            <div class="logo-text">DUONG // HIRE ON UPWORK</div>
+            <div class="logo-sub">Contract Terms &amp; Scope Initiation</div>
+          </div>
+        </div>
+        <div class="upwork-pill">
+          <span class="dot"></span>
+          Upwork Verified
+        </div>
+      </div>
+
+      <div class="section-eyebrow">06 // Next Steps &amp; Engagement</div>
+      <h2 class="section-title">Ready to Elevate Your Web &amp; Search Growth?</h2>
+      <p class="section-desc">
+        Let's collaborate on Upwork. Here is how we can initiate your project with full milestone security.
+      </p>
+
+      <div class="pillars-grid" style="margin-bottom: 14px;">
+        <div class="card">
+          <strong style="font-size: 11.5px; color: #0f172a; display: block; margin-bottom: 4px;">Fixed-Price Contracts</strong>
+          <p style="font-size: 9px; color: #475569; line-height: 1.45;">
+            Ideal for well-defined deliverables: landing page development, technical SEO crawl audits, Schema.org implementation, or webhook automation setups. Scope and milestones agreed upon upfront.
+          </p>
+        </div>
+        <div class="card">
+          <strong style="font-size: 11.5px; color: #0f172a; display: block; margin-bottom: 4px;">Hourly Contracts</strong>
+          <p style="font-size: 9px; color: #475569; line-height: 1.45;">
+            Ideal for ongoing maintenance, custom Shopify Liquid theme adjustments, troubleshooting app conflicts, and iterative SEO testing. Tracked securely via the Upwork Desktop App.
+          </p>
+        </div>
+      </div>
+
+      <div class="card-gray" style="margin-bottom: 14px;">
+        <div class="section-eyebrow">Core Project Types Welcomed</div>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; font-size: 9px; margin-top: 6px;">
+          <div>
+            <strong>• E-Commerce Store Builds:</strong><br>
+            Custom Shopify Liquid themes, collection setups, and checkout CRO.
+          </div>
+          <div>
+            <strong>• Technical SEO Audits:</strong><br>
+            Crawl triage, 4xx fixes, XML sitemaps &amp; Schema JSON-LD markup.
+          </div>
+          <div>
+            <strong>• AI &amp; Tracking Pipelines:</strong><br>
+            GTM event deduplication, GA4 funnels, Make &amp; Zapier webhooks.
+          </div>
+        </div>
+      </div>
+
+      <!-- UPWORK POLICY STRICT NOTICE (100% TOS COMPLIANT) -->
+      <div class="upwork-policy-box">
+        <div class="upwork-badge-large">
+          UPWORK<br>ESCROW
+        </div>
+        <div class="policy-text">
+          <h4>Strictly Upwork Terms of Service (TOS) Compliant</h4>
+          <p>
+            In full compliance with Upwork's non-circumvention policies, <strong>all initial consultations, communications, contract proposals, milestone negotiations, and payments are conducted exclusively through Upwork</strong>.
+          </p>
+          <p style="margin-top: 4px; font-weight: 600; color: #1e293b;">
+            To get started, please click <strong>"Invite to Job"</strong> or send a direct message on my Upwork profile. I look forward to discussing your project goals!
+          </p>
+        </div>
+      </div>
+
+      <div style="margin-top: 20px; text-align: center; padding: 14px; background: #eff6ff; border-radius: 10px; border: 1px solid #bfdbfe;">
+        <div style="font-size: 13px; font-weight: 800; color: #1e40af; margin-bottom: 2px;">
+          Invite Duong to Your Upwork Job Today
+        </div>
+        <div style="font-size: 9.5px; color: #3b82f6;">
+          Fast 24-hour turnaround on initial audits • Clear milestone estimates • Verified technical execution
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>UPWORK PORTFOLIO • DUONG</span>
+      <span class="footer-right">PAGE 06 // HIRE ON UPWORK</span>
+    </div>
+  </div>
+
+</body>
+</html>
